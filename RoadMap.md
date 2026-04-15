@@ -5,7 +5,7 @@
 **Starting Point:** Advanced UI State Modeling  
 **Schedule:** Evenings + Weekends (~10–12 hrs/week)  
 **Style:** 80% Coding / 20% Theory  
-**Goal:** Read, understand, and contribute to any Kotlin project  
+**Goal:** Read, understand, and contribute to any Kotlin project  be ready 
 
 ---
 
