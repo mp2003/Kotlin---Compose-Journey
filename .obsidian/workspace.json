@@ -250,13 +250,23 @@
               "icon": "lucide-list",
               "title": "Outline of RoadMap"
             }
+          },
+          {
+            "id": "fd91ad491fc6fc18",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -266,15 +276,16 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "faf70fc78988e02f",
   "lastOpenFiles": [
+    "MVI Architecture/Effect.md",
     "MVI Architecture/ViewModel.md",
     "RoadMap.md",
     "MVI Architecture/onIntent.md",
-    "MVI Architecture/Effect.md",
     "MVI Architecture/MVI Architecture.md",
     "MVI Architecture/Intent.md",
     "MVI Architecture/State.md",
