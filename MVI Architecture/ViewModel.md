@@ -27,6 +27,9 @@
 - ViewModel emits Effect (if needed)
 - UI reacts to State and Effect
 
+
+## ❌ Common Mistake (Important)
+
 ### Problem
 - Calling ViewModel functions directly from UI  
 ```kotlin
