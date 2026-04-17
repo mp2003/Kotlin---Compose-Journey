@@ -28,6 +28,7 @@
 - UI reacts to State and Effect
 
 ## Example (Kotlin)
+
 ```kotlin
 class TaskViewModel : ViewModel() {
 
@@ -54,3 +55,43 @@ class TaskViewModel : ViewModel() {
         }
     }
 }
+```
+
+###### ❌ Common Mistake
+
+- Calling ViewModel functions directly from UI
+
+```kotlin
+viewModel.addTask("Task")
+````
+
+###### **Why It’s Wrong**
+
+- Breaks **Unidirectional Data Flow**
+- UI controls business logic (not allowed in MVI)
+- Turns architecture closer to MVVM instead of true MVI
+
+---
+
+###### **Solution**
+
+- Always send **Intent** from UI
+
+```kotlin
+viewModel.onIntent(UiIntent.Add("Task"))
+```
+
+---
+
+###### Common Mistake
+
+- Mutating state directly inside ViewModel
+
+```kotlin
+fun onIntent(intent: UiIntent) {
+    when(intent) {
+        is UiIntent.Add -> _state.value.items.add(intent.item)
+    }
+}
+```
+```
