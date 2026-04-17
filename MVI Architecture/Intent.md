@@ -32,3 +32,4 @@ sealed class UiIntent {
     data class Add(val item: String)
     data class Delete(val item: String)
 }
+```

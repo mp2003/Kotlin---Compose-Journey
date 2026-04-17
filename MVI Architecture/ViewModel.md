@@ -105,7 +105,7 @@ fun onIntent(intent: UiIntent) {
 
 ---
 
-###### ** Solution**
+######  Solution
 
 - Always create a **new state copy**
 

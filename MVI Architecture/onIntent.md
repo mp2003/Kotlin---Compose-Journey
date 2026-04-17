@@ -43,3 +43,4 @@ fun onIntent(intent: UiIntent) {
         }
     }
 }
+```

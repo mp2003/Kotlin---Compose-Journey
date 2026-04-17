@@ -50,16 +50,6 @@
             }
           },
           {
-            "id": "6930bb4ef47fb0b4",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
             "id": "1f2cd5005ad35eb3",
             "type": "leaf",
             "state": {
@@ -276,14 +266,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6930bb4ef47fb0b4",
+  "active": "1f2cd5005ad35eb3",
   "lastOpenFiles": [
-    "MVI Architecture/Effect.md",
-    "MVI Architecture/State.md",
-    "MVI Architecture/Intent.md",
     "MVI Architecture/ViewModel.md",
+    "MVI Architecture/State.md",
     "MVI Architecture/onIntent.md",
     "MVI Architecture/MVI Architecture.md",
+    "MVI Architecture/Intent.md",
+    "MVI Architecture/Effect.md",
     "RoadMap.md",
     "MVI Architecture/ViewModel in MVI.md",
     "MVI Architecture",
