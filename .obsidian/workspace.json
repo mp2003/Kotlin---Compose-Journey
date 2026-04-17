@@ -69,12 +69,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/State.md",
+                "file": "MVI Architecture/MVI Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "State"
+              "title": "MVI Architecture"
+            }
+          },
+          {
+            "id": "85655daa5dd53d8d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MVI Architecture/ViewModel.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ViewModel"
             }
           },
           {
@@ -106,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -280,21 +294,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7507c52d75287a8d",
+  "active": "85655daa5dd53d8d",
   "lastOpenFiles": [
+    "MVI Architecture/MVI Architecture.md",
+    "MVI Architecture/State.md",
+    "2026-04-17.md",
+    "Untitled.base",
     "MVI Architecture/onIntent.md",
     "MVI Architecture/ViewModel.md",
-    "MVI Architecture/State.md",
     "MVI Architecture/Reducer.md",
     "MVI Architecture/Intent.md",
-    "MVI Architecture/MVI Architecture.md",
     "MVI Architecture/Effect.md",
     "RoadMap.md",
     "MVI Architecture/ViewModel in MVI.md",
     "MVI Architecture",
     "Untitled.canvas",
     "2026-04-15.md",
-    "Untitled.base",
     "Untitled 1.base",
     "Welcome.md",
     "create a link.md"
