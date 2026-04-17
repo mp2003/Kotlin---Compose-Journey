@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/Intent.md",
+                "file": "MVI Architecture/State.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Intent"
+              "title": "State"
             }
           },
           {
@@ -282,13 +282,13 @@
   },
   "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
+    "MVI Architecture/Intent.md",
     "MVI Architecture/Effect.md",
     "MVI Architecture/State.md",
     "MVI Architecture/onIntent.md",
     "MVI Architecture/MVI Architecture.md",
     "RoadMap.md",
     "MVI Architecture/ViewModel.md",
-    "MVI Architecture/Intent.md",
     "MVI Architecture/ViewModel in MVI.md",
     "MVI Architecture",
     "Untitled.canvas",
