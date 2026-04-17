@@ -27,6 +27,11 @@
 - ViewModel emits Effect (if needed)
 - UI reacts to State and Effect
 
+### Problem
+- Calling ViewModel functions directly from UI  
+```kotlin
+viewModel.addTask("Task")
+
 ## Example (Kotlin)
 ```kotlin
 class TaskViewModel : ViewModel() {
