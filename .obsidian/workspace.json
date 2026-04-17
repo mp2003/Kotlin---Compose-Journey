@@ -106,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -280,15 +280,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "791c7be8782ce1c5",
+  "active": "6930bb4ef47fb0b4",
   "lastOpenFiles": [
-    "MVI Architecture/State.md",
-    "MVI Architecture/Intent.md",
-    "MVI Architecture/Effect.md",
     "MVI Architecture/onIntent.md",
+    "MVI Architecture/Intent.md",
+    "MVI Architecture/State.md",
+    "MVI Architecture/ViewModel.md",
+    "MVI Architecture/Effect.md",
     "MVI Architecture/MVI Architecture.md",
     "RoadMap.md",
-    "MVI Architecture/ViewModel.md",
     "MVI Architecture/ViewModel in MVI.md",
     "MVI Architecture",
     "Untitled.canvas",
