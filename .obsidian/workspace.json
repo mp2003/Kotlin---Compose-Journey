@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/ViewModel.md",
+                "file": "MVI Architecture/State.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ViewModel"
+              "title": "State"
             }
           },
           {
@@ -282,10 +282,10 @@
   },
   "active": "6930bb4ef47fb0b4",
   "lastOpenFiles": [
-    "MVI Architecture/onIntent.md",
     "MVI Architecture/Intent.md",
-    "MVI Architecture/State.md",
     "MVI Architecture/ViewModel.md",
+    "MVI Architecture/onIntent.md",
+    "MVI Architecture/State.md",
     "MVI Architecture/Effect.md",
     "MVI Architecture/MVI Architecture.md",
     "RoadMap.md",

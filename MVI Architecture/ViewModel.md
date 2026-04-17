@@ -94,4 +94,34 @@ fun onIntent(intent: UiIntent) {
     }
 }
 ```
+
+
+###### **Why It’s Wrong**
+
+- Breaks **immutability**
+- `StateFlow` may NOT emit updates properly
+- UI might not recompose/update
+- Leads to unpredictable bugs
+
+---
+
+###### ** Solution**
+
+- Always create a **new state copy**
+
+```kotlin
+fun onIntent(intent: UiIntent) {
+    when(intent) {
+        is UiIntent.Add -> {
+            _state.update {
+                it.copy(items = it.items + intent.item)
+            }
+        }
+    }
+}
 ```
+
+###### **Rule**
+
+Never mutate state  
+Always replace state with a new copy
