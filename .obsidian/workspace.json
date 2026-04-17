@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/onIntent.md",
+                "file": "MVI Architecture/Effect.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "onIntent"
+              "title": "Effect"
             }
           },
           {
@@ -280,13 +280,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "faf70fc78988e02f",
+  "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
+    "MVI Architecture/onIntent.md",
     "MVI Architecture/MVI Architecture.md",
     "MVI Architecture/Effect.md",
     "RoadMap.md",
     "MVI Architecture/ViewModel.md",
-    "MVI Architecture/onIntent.md",
     "MVI Architecture/Intent.md",
     "MVI Architecture/State.md",
     "MVI Architecture/ViewModel in MVI.md",
