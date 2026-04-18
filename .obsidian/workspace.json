@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/State.md",
+                "file": "MVI Architecture/Effect.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "State"
+              "title": "Effect"
             }
           },
           {
@@ -294,10 +294,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "85655daa5dd53d8d",
+  "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
-    "MVI Architecture/MVI Architecture.md",
     "MVI Architecture/State.md",
+    "MVI Architecture/MVI Architecture.md",
     "MVI Architecture/ViewModel.md",
     "MVI Architecture/Effect.md",
     "MVI Architecture/Intent.md",

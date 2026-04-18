@@ -1,4 +1,3 @@
-# Effect
 
 - Represents one-time UI actions (happens once)
 - Not part of UI state (UI should not remember it)
