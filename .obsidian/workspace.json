@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/Reducer.md",
+                "file": "MVI Architecture/MVI Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reducer"
+              "title": "MVI Architecture"
             }
           },
           {
@@ -296,15 +296,15 @@
   },
   "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
-    "MVI Architecture/Effect.md",
-    "MVI Architecture/ViewModel.md",
-    "MVI Architecture/MVI Architecture.md",
     "MVI Architecture/State.md",
+    "MVI Architecture/Effect.md",
+    "MVI Architecture/Intent.md",
+    "MVI Architecture/ViewModel.md",
+    "MVI Architecture/Reducer.md",
+    "MVI Architecture/onIntent.md",
+    "MVI Architecture/MVI Architecture.md",
     "2026-04-17.md",
     "Untitled.base",
-    "MVI Architecture/onIntent.md",
-    "MVI Architecture/Reducer.md",
-    "MVI Architecture/Intent.md",
     "RoadMap.md",
     "MVI Architecture/ViewModel in MVI.md",
     "MVI Architecture",
