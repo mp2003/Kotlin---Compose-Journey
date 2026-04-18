@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/Effect.md",
+                "file": "MVI Architecture/Reducer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Effect"
+              "title": "Reducer"
             }
           },
           {
@@ -294,8 +294,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "85655daa5dd53d8d",
+  "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
+    "MVI Architecture/Effect.md",
     "MVI Architecture/ViewModel.md",
     "MVI Architecture/MVI Architecture.md",
     "MVI Architecture/State.md",
@@ -304,7 +305,6 @@
     "MVI Architecture/onIntent.md",
     "MVI Architecture/Reducer.md",
     "MVI Architecture/Intent.md",
-    "MVI Architecture/Effect.md",
     "RoadMap.md",
     "MVI Architecture/ViewModel in MVI.md",
     "MVI Architecture",
