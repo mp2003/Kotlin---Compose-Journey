@@ -224,13 +224,11 @@ class TaskViewModel : ViewModel() {
 ```
 
 
-#### UI Part 
-
 #### TaskScreen (Compose UI)
 
 ---
 
-## What this does
+##### What this does
 - Observes State from ViewModel
 - Sends Intent to ViewModel
 - Collects Effect (toast)
