@@ -223,3 +223,104 @@ class TaskViewModel : ViewModel() {
 }
 ```
 
+
+#### UI Part 
+
+#### TaskScreen (Compose UI)
+
+---
+
+## What this does
+- Observes State from ViewModel
+- Sends Intent to ViewModel
+- Collects Effect (toast)
+
+---
+
+## Compose UI
+
+```kotlin
+package com.milind.composeplayground
+
+import android.widget.Toast
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+
+@Composable
+fun TaskScreen(
+    viewModel: TaskViewModel = viewModel()
+) {
+
+    // 1. Collect State
+    val state by viewModel.state.collectAsState()
+
+    // 2. Context for Toast
+    val context = LocalContext.current
+
+    // 3. Collect Effect (ONE TIME)
+    LaunchedEffect(Unit) {
+        viewModel.effect.collect { effect ->
+            when (effect) {
+                is TaskEffect.ShowToast -> {
+                    Toast.makeText(context, effect.message, Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    // 4. UI Layout
+    Column(modifier = Modifier.padding(16.dp)) {
+
+        var text by remember { mutableStateOf("") }
+
+        // Input + Add Button
+        Row {
+            TextField(
+                value = text,
+                onValueChange = { text = it },
+                modifier = Modifier.weight(1f)
+            )
+
+            Spacer(modifier = Modifier.width(8.dp))
+
+            Button(onClick = {
+                if (text.isNotEmpty()) {
+                    viewModel.onIntent(TaskIntent.AddTask(text))
+                    text = ""
+                }
+            }) {
+                Text("Add")
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Task List
+        LazyColumn {
+            items(state.task) { item ->
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(text = item)
+
+                    Button(onClick = {
+                        viewModel.onIntent(TaskIntent.DeleteTask(item))
+                    }) {
+                        Text("Delete")
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(8.dp))
+            }
+        }
+    }
+}
