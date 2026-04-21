@@ -128,10 +128,11 @@ private fun deleteTask(task: String) {
 
 ---
 
-State  → data class → StateFlow
-Intent → sealed class
-Effect → sealed class → SharedFlow
+###### Points to remember
+	State  → data class → StateFlow
+	Intent → sealed class
+	Effect → sealed class → SharedFlow
 
-Update → copy()
-Emit   → launch { emit() }
-Entry  → onIntent()
+	Update → copy()
+	Emit   → launch { emit() }
+	Entry  → onIntent()
