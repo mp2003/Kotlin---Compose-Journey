@@ -3,7 +3,7 @@
 👉 Ask:  “What does UI show?”
 - Answer:
 	- List of tasks
-	- Loading
+	- Loadin
 
 ``` kotlin
 data class TaskState(
