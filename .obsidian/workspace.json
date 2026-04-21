@@ -192,7 +192,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d75270cf3320d5ac",
@@ -294,7 +295,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -310,9 +312,9 @@
   },
   "active": "3d1cae9a7dafc869",
   "lastOpenFiles": [
-    "MVI Architecture/Effect.md",
-    "MVI Architecture/Task Manager Screen - Exercise.md",
     "MVI Architecture/State.md",
+    "MVI Architecture/Task Manager Screen - Exercise.md",
+    "MVI Architecture/Effect.md",
     "MVI Architecture/MVI Architecture.md",
     "MVI Architecture/ViewModel.md",
     "MVI Architecture/Intent.md",

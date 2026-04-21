@@ -13,7 +13,7 @@ data class TaskState(
 ```
 
 ###### **Remember**
-- Holds UI data
+- Holds UI **data**
 - Always immutable
 - Use copy() to update
 ---
