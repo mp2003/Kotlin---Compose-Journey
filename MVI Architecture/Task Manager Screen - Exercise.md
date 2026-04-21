@@ -28,8 +28,7 @@ sealed class TaskIntent {
 
 #### **STEP 3 — DEFINE EFFECT**
 
-👉 Ask:  
-“What happens once?”
+👉 Ask:   “What happens once?”
 - Answer:
 	- Show toast
 
@@ -50,4 +49,47 @@ class TaskViewModel : ViewModel() {
     val effect = _effect
 }
 ```
+
+
+##### **STEP 5 — ADD onIntent()**
+
+👉 This is your entry point
+
+```kotlin 
+fun onIntent(intent: TaskIntent) {
+    when (intent) {
+
+        is TaskIntent.AddTask -> {
+            addTask(intent.task)
+        }
+
+        is TaskIntent.DeleteTask -> {
+            deleteTask(intent.task)
+        }
+    }
+}
+```
+
+
+#### STEP 6 - Handle Logic 
+
+```kotlin
+private fun addTask(task: String) {
+    _state.update {
+        it.copy(tasks = it.tasks + task)
+    }
+}
+
+private fun deleteTask(task: String) {
+    _state.update {
+        it.copy(tasks = it.tasks - task)
+    }
+
+    viewModelScope.launch {
+        _effect.emit(TaskEffect.ShowToast("Task Deleted"))
+    }
+}
+
+```
+
 
