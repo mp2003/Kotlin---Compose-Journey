@@ -12,6 +12,12 @@ data class TaskState(
 )
 ```
 
+###### **Remember**
+- Holds UI data
+- Always immutable
+- Use copy() to update
+---
+
 #### **STEP 2 — DEFINE INTENT**
 
 👉 Ask:  “What can user do?”
@@ -26,6 +32,11 @@ sealed class TaskIntent {
 }
 ```
 
+###### **Remember**
+- Only user actions
+- No logic inside
+- Just data
+---
 #### **STEP 3 — DEFINE EFFECT**
 
 👉 Ask:   “What happens once?”
@@ -37,6 +48,14 @@ sealed class TaskEffect {
     data class ShowToast(val message: String) : TaskEffect()
 }
 ```
+
+###### **Remember**
+
+- One-time event
+- NOT stored in state
+- Uses SharedFlow
+
+---
 
 #### **STEP 4 — CREATE VIEWMODEL (BASIC STRUCTURE)**
 
@@ -50,6 +69,13 @@ class TaskViewModel : ViewModel() {
 }
 ```
 
+###### **Remember**
+
+- State → StateFlow
+- Effect → SharedFlow
+- Expose as read-only (later improvement)
+
+---
 
 ##### **STEP 5 — ADD onIntent()**
 
@@ -70,6 +96,13 @@ fun onIntent(intent: TaskIntent) {
 }
 ```
 
+###### **Remember**
+
+- Single entry point
+- Do NOT write heavy logic here
+- Just route actions
+
+---
 
 #### STEP 6 - Handle Logic 
 
@@ -93,3 +126,12 @@ private fun deleteTask(task: String) {
 ```
 
 
+---
+
+State  → data class → StateFlow
+Intent → sealed class
+Effect → sealed class → SharedFlow
+
+Update → copy()
+Emit   → launch { emit() }
+Entry  → onIntent()
