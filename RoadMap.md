@@ -62,6 +62,7 @@
 - [ ] Hilt vs Koin
 - [ ] Scopes
 - [ ] @Provides vs @Binds
+- [ ] Dependency Inversion
 
 ## Coding
 
