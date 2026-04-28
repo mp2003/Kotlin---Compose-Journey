@@ -58,7 +58,7 @@
 # 🟡 WEEK 2 — Dependency Injection (Hilt)
 
 ## Theory
-- [ ] What is DI
+- [x] What is DI
 - [ ] Hilt vs Koin
 - [ ] Scopes
 - [ ] @Provides vs @Binds
