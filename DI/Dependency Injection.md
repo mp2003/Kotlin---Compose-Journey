@@ -8,11 +8,27 @@
 	2. Creating its dependencies
 	
 	With DI, your class does **only one job**:
-	
 	- Business logic
 	
 	Everything else (object creation, wiring) is handled outside.
-	
+
+###### Example 
+
+-  Without DI : 
+  ``` kotlin
+  class TaskViewModel : ViewModel() {
+    private val repo = TaskRepository()
+}
+  ```
+
+	What’s happening here:
+		- ViewModel decides _which_ repo to use
+		- ViewModel decides _how_ to create it
+		- ViewModel is tightly coupled to that implementation
+
+- 
+  
+  
 ###### What to Look For in Code
 - Classes do not create objects using `ClassName()`
 - Dependencies are passed in constructor
