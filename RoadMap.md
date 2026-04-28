@@ -36,22 +36,22 @@
 ## Coding
 
 ### Exercise 1 — UI State
-- [ ] Create `ScreenUiState`
-- [ ] Handle Loading / Success / Error / Empty
-- [ ] Render UI using `when(state)`
+- [x] Create `ScreenUiState`
+- [x] Handle Loading / Success / Error / Empty
+- [x] Render UI using `when(state)`
 
 ### Exercise 2 — Intents
-- [ ] Create `ScreenIntent`
-- [ ] Implement `onIntent(intent)`
-- [ ] Update `StateFlow<UiState>`
+- [x] Create `ScreenIntent`
+- [x] Implement `onIntent(intent)`
+- [x] Update `StateFlow<UiState>`
 
 ### Exercise 3 — Effects
-- [ ] Create `UiEffect`
-- [ ] Use `SharedFlow`
-- [ ] Handle in Compose with `LaunchedEffect`
+- [x] Create `UiEffect`
+- [x] Use `SharedFlow`
+- [x] Handle in Compose with `LaunchedEffect`
 
 ### Build
-- [ ] Task Manager Screen (full MVI flow)
+- [x] Task Manager Screen (full MVI flow)
 
 ---
 
