@@ -2,6 +2,7 @@
 ###### Definition
 - Dependency Injection (DI) = providing dependencies from outside instead of creating them inside a class
 
+
 ###### What to Look For in Code
 - Classes do not create objects using `ClassName()`
 - Dependencies are passed in constructor
