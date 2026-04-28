@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/Hilt vs Koin.md",
+                "file": "DI/Hilt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hilt vs Koin"
+              "title": "Hilt"
             }
           }
         ],
@@ -211,10 +211,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "791c7be8782ce1c5",
+  "active": "9a72d98a99d544ab",
   "lastOpenFiles": [
     "DI/Dependency Injection.md",
-    "DI/Hilt vs Koin.md",
+    "DI/Hilt.md",
     "RoadMap.md",
     "MVI Architecture/Intent.md",
     "MVI Architecture/onIntent.md",
