@@ -1,7 +1,8 @@
 ###### Definition
 - Dependency Injection (DI) = providing dependencies from outside instead of creating them inside a class
-
+---
 ###### **What DI actually does**
+
 -  DI **removes responsibility from your class**.
 	Without DI, your class is doing **two jobs**:
 	1. Business logic
@@ -12,6 +13,7 @@
 	
 	Everything else (object creation, wiring) is handled outside.
 
+---
 ###### Example 
 
 -  Without DI : 
@@ -21,14 +23,37 @@
 }
   ```
 
-	What’s happening here:
-		- ViewModel decides _which_ repo to use
-		- ViewModel decides _how_ to create it
-		- ViewModel is tightly coupled to that implementation
+What’s happening here:
+	- ViewModel decides _which_ repo to use
+	- ViewModel decides _how_ to create it
+	- ViewModel is tightly coupled to that implementation
 
-- 
+-  With DI : 
+
+```kotlin
+class TaskViewModel(
+    private val repo: TaskRepository
+) : ViewModel()
+```
   
-  
+  Now:
+- ViewModel just says → “I need a repository”
+- It does NOT care:
+    - Which implementation
+    - How it’s created
+
+---
+
+###### **What changed (important)**
+
+- You moved this decision:
+    - **“How to create dependencies”**
+    - from → _inside class_
+    - to → _outside system (Hilt)
+
+That’s it. That’s DI.
+
+---
 ###### What to Look For in Code
 - Classes do not create objects using `ClassName()`
 - Dependencies are passed in constructor
@@ -36,12 +61,15 @@
 - Interfaces used instead of concrete classes
 - Hilt modules define bindings
 - Entry points annotated with `@AndroidEntryPoint`
-
+  
+---
 ###### Why This Matters (Practical)
 - You can replace implementations easily
 - You can test using fake/mock dependencies
 - Object creation is centralized
 - No duplicate object creation across app
+
+---
 
 ###### Core Pattern (Always Follow)
 - UI → ViewModel → Repository → Data source
