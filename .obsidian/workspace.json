@@ -151,10 +151,14 @@
             "id": "43a3c19878df15a3",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "RoadMap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RoadMap"
             }
           }
         ],
@@ -216,7 +220,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d75270cf3320d5ac",
@@ -333,11 +338,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "791c7be8782ce1c5",
+  "active": "43a3c19878df15a3",
   "lastOpenFiles": [
+    "DI/Dependency Injection.md",
     "MVI Architecture/MVI Architecture.md",
     "RoadMap.md",
-    "DI/Dependency Injection.md",
     "DI",
     "note Format.md",
     "MVI Architecture/Intent.md",
