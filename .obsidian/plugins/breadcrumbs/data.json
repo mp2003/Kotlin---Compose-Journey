@@ -175,7 +175,7 @@
         "readable_line_width": true
       },
       "trail": {
-        "enabled": false,
+        "enabled": true,
         "format": "path",
         "selection": "all",
         "default_depth": 999,
@@ -241,7 +241,7 @@
           "prevs"
         ],
         "lock_view": false,
-        "lock_path": "MVI Architecture/Task Manager Screen - Exercise.md"
+        "lock_path": "MVI Architecture/Intent - User Actions.md"
       },
       "tree": {
         "collapse": false,
@@ -249,7 +249,7 @@
         "merge_fields": false,
         "default_depth": 5,
         "lock_view": false,
-        "lock_path": "MVI Architecture/Task Manager Screen - Exercise.md",
+        "lock_path": "MVI Architecture/Intent - User Actions.md",
         "field_group_labels": [
           "ups",
           "downs"
