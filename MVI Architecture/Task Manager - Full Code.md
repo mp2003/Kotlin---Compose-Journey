@@ -212,9 +212,3 @@ fun TaskScreen(
 
 ###### Related
 - [[Task Manager Screen - Exercise]]
-- [[MVI Architecture]]
-- [[State]]
-- [[Intent]]
-- [[Effect]]
-- [[ViewModel]]
-- [[onIntent]]

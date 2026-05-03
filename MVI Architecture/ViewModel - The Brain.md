@@ -119,9 +119,6 @@ viewModel.onIntent(UiIntent.Add("Task"))   // OK: goes through Intent
 ---
 
 ###### Related
-- [[MVI Architecture]]
-- [[State]]
-- [[Intent]]
-- [[Effect]]
-- [[onIntent]]
-- [[Reducer]]
+- [[MVI - Overview]]
+- [[onIntent - Entry Point]]
+- [[Effect - One-time Events]]

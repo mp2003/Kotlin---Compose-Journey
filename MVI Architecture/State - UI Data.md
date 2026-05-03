@@ -106,8 +106,5 @@ _state.value.items.add("New Item")
 ---
 
 ###### Related
-- [[MVI Architecture]]
-- [[Intent]]
-- [[Effect]]
-- [[ViewModel]]
-- [[Reducer]]
+- [[MVI - Overview]]
+- [[Reducer - Pure State Update]]

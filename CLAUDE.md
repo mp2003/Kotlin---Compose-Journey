@@ -37,8 +37,15 @@ Notes link to each other with Obsidian wiki-link syntax: `[[Note Name]]`. Preser
 - Small code blocks during explanation, one Full Example at the end
 - ASCII flowcharts only when there is a flow — inside ` ```text ` blocks
 - All headings use `######` (h6), separated by `---`
-- Cross-reference siblings with `[[Note Name]]`
 - Define every technical word inline
+
+**Wiki-link rules (keeps Obsidian graph readable):**
+
+- Each folder has one hub/overview note (e.g. `MVI - Overview`, `DI - Overview`)
+- Hub links to all its children; children link UP to the hub + at most 2 collaborators
+- Never make every note link to every other note — that makes a spaghetti graph
+- Keep all links in the Related section; no inline `[[wiki-links]]` in body sections
+- The hub note is the only exception — it may use inline links
 
 ## User context (calibrate to this)
 

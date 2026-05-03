@@ -1,4 +1,4 @@
-## [[Layers in Hilt Architecture]]
+## [[Hilt - Architecture Layers]]
 ```
 
 PRESENTATION   → HiltTaskScreen → TaskViewModel  
@@ -104,4 +104,4 @@ Hilt always answers 3 questions:
 
 - Hilt manages object creation, wiring, and lifecycle automatically.
 
-[[Dependency Injection]]
+[[DI - Overview]]

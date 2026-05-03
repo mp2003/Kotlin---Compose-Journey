@@ -89,8 +89,5 @@ sealed class UiIntent {
 ---
 
 ###### Related
-- [[MVI Architecture]]
-- [[State]]
-- [[Effect]]
-- [[ViewModel]]
-- [[onIntent]]
+- [[MVI - Overview]]
+- [[onIntent - Entry Point]]

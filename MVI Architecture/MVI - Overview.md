@@ -34,22 +34,22 @@
 ---
 
 ###### Core Concepts
-- [[State]] -> what the UI shows
-- [[Intent]] -> what the user did
-- [[Effect]] -> one-time events (toast, navigation)
+- [[State - UI Data]] -> what the UI shows
+- [[Intent - User Actions]] -> what the user did
+- [[Effect - One-time Events]] -> one-time events (toast, navigation)
 - Single Source of Truth -> one state object per screen
 - Unidirectional Data Flow -> data moves one way only
-- [[ViewModel]] -> the brain that ties it together
+- [[ViewModel - The Brain]] -> the brain that ties it together
 
 ---
 
 ###### How it Works
 - User taps something
-- UI sends an [[Intent]]
-- [[ViewModel]] receives it
-- ViewModel updates [[State]]
+- UI sends an [[Intent - User Actions]]
+- [[ViewModel - The Brain]] receives it
+- ViewModel updates [[State - UI Data]]
 - UI re-renders from new State
-- ViewModel emits an [[Effect]] for one-time things
+- ViewModel emits an [[Effect - One-time Events]] for one-time things
 
 ---
 
@@ -99,9 +99,10 @@
 ---
 
 ###### Related
-- [[State]]
-- [[Intent]]
-- [[Effect]]
-- [[ViewModel]]
-- [[onIntent]]
-- [[Reducer]]
+- [[State - UI Data]]
+- [[Intent - User Actions]]
+- [[Effect - One-time Events]]
+- [[ViewModel - The Brain]]
+- [[onIntent - Entry Point]]
+- [[Reducer - Pure State Update]]
+- [[Task Manager Screen - Exercise]]

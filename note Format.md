@@ -24,8 +24,15 @@
 - Build code in small blocks, end with one Full Example block
 - ASCII flowcharts go inside ```` ```text ```` blocks
 - All headings use `######` (h6), separated by `---`
-- Link related notes with `[[Note Name]]`
 - Define every technical word inline in plain language
+
+**Wiki-link rules (keeps the graph readable):**
+- Each topic folder has ONE hub/overview note (e.g. `MVI - Overview`)
+- Hub note -> links to ALL its children
+- Child notes -> link UP to the hub PLUS at most 2 direct collaborators
+- Never list every sibling in Related — that creates a "spaghetti graph"
+- No inline `[[wiki-links]]` inside body sections; keep all links in Related
+- Exception: the hub note may use inline links since its job is to point at everything
 
 **Self-check before saving:**
 - [ ] Elevator Pitch present and is one sentence

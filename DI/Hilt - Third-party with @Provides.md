@@ -40,7 +40,7 @@
     - Own class -> `@Inject constructor`
     - Own interface + implementation -> `@Binds`
     - Foreign class -> `@Provides`
-- Link: [[Hilt]], [[Dependency Injection]], [[Injection]]
+- Link: [[Hilt - DI Library]], [[DI - Overview]], [[Injection - Constructor Injection]]
 
 ---
 
@@ -208,7 +208,4 @@ object NetworkModule {
 ---
 
 ###### Related
-- [[Hilt]]
-- [[Dependency Injection]]
-- [[Injection]]
-- [[Layers in Hilt Architecture]]
+- [[Hilt - DI Library]]

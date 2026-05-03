@@ -38,7 +38,6 @@
 - Update -> `.copy()`
 - Emit -> `launch { emit() }`
 - Entry -> `onIntent()`
-- Link: [[MVI Architecture]], [[State]], [[Intent]], [[Effect]], [[ViewModel]], [[onIntent]]
 
 ---
 
@@ -179,10 +178,5 @@ private fun deleteTask(task: String) {
 ---
 
 ###### Related
+- [[MVI - Overview]]
 - [[Task Manager - Full Code]]
-- [[MVI Architecture]]
-- [[State]]
-- [[Intent]]
-- [[Effect]]
-- [[ViewModel]]
-- [[onIntent]]

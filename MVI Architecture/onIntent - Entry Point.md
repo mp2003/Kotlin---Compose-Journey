@@ -114,9 +114,6 @@ private fun deleteItem(item: String) {
 ---
 
 ###### Related
-- [[MVI Architecture]]
-- [[Intent]]
-- [[State]]
-- [[Effect]]
-- [[ViewModel]]
-- [[Reducer]]
+- [[MVI - Overview]]
+- [[Intent - User Actions]]
+- [[Reducer - Pure State Update]]

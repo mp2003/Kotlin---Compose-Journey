@@ -245,4 +245,4 @@ Presentation → Domain ← Data
 
 ---
 
-[[Hilt]]
+[[Hilt - DI Library]]

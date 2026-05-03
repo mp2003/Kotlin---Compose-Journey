@@ -6,17 +6,39 @@
   "hideUnresolved": false,
   "showOrphans": false,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:\"MVI Architecture\"",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    },
+    {
+      "query": "path:\"DI\"",
+      "color": {
+        "a": 1,
+        "rgb": 14048348
+      }
+    },
+    {
+      "query": "file:\"Overview\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": true,
-  "textFadeMultiplier": -0.7,
-  "nodeSizeMultiplier": 1.01337164256198,
-  "lineSizeMultiplier": 1.64725955111518,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.4,
+  "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.0883910123966942,
-  "repelStrength": 8.77066115702479,
-  "linkStrength": 0.32915805785124,
-  "linkDistance": 30,
-  "scale": 0.8303030620091005,
+  "centerStrength": 0.18,
+  "repelStrength": 18,
+  "linkStrength": 0.05,
+  "linkDistance": 250,
+  "scale": 0.31938705120824007,
   "close": true
 }

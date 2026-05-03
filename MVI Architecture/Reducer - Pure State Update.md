@@ -121,8 +121,6 @@ fun onIntent(intent: UiIntent) {
 ---
 
 ###### Related
-- [[MVI Architecture]]
-- [[State]]
-- [[Intent]]
-- [[onIntent]]
-- [[ViewModel]]
+- [[MVI - Overview]]
+- [[State - UI Data]]
+- [[onIntent - Entry Point]]

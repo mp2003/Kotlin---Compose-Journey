@@ -119,7 +119,5 @@ LaunchedEffect(Unit) {
 ---
 
 ###### Related
-- [[MVI Architecture]]
-- [[State]]
-- [[Intent]]
-- [[ViewModel]]
+- [[MVI - Overview]]
+- [[ViewModel - The Brain]]
