@@ -1,98 +1,68 @@
-###### **Definition**
+###### Definition
+- <One-line definition of the concept>
 
-```html
-<Write a clear one-line definition>
+---
+
+###### What
+- <Key idea in plain language>
+- <Bullet 2>
+- <Bullet 3>
+
+---
+
+###### Why
+- <Benefit 1>
+- <Benefit 2>
+- <Benefit 3>
+
+---
+
+###### Core Concepts
+- <Concept 1> → <short explanation>
+- <Concept 2> → <short explanation>
+- <Concept 3> → <short explanation>
+- Link related notes using [[Note Name]]
+
+---
+
+###### How it Works
+- <Step 1>
+- <Step 2>
+- <Step 3>
+- <Step 4>
+
+---
+
+###### Example
+```kotlin
+// Minimal Kotlin example showing the pattern
 ```
 
-###### **What**
+**Before / After (use only when comparing)**
 
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-
-```html
-<Key idea in simple terms>
+```kotlin
+// Before
 ```
 
-###### **Why**
-
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-
-```html
-<Benefit>
+```kotlin
+// After
 ```
 
-###### **Core Concepts**
+---
 
-- <Concept 1>
-- <Concept 2>
-- <Concept 3>
-- <Rules / principles>
+###### Common Mistakes
+- ❌ <Mistake 1>
+- ❌ <Mistake 2>
+- ❌ <Mistake 3>
 
-###### **How it Works**
+---
 
-1. <Step 1>
-2. <Step 2>
-3. <Step 3>
-4. <Step 4>
+###### Key Rule
+- <One-line takeaway the reader should remember>
 
-###### **Flow (Optional)**
+---
 
-```html
-<Describe end-to-end flow in one short paragraph>
-```
-
-###### **Usage**
-
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-
-```html
-<When NOT to use it>
-```
-
-###### **Example**
-
-```html
-<language>
-<code example here>
-```
-
-###### **Edge Cases**
-
-- <Edge case 1>
-- <Edge case 2>
-
-###### **Common Mistakes**
-
-- <Mistake 1>
-- <Mistake 2>
-
-###### **Interview Points**
-
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-
-```html
-<One-liner explanation>
-```
-
-###### **Notes**
-
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-- ![Attachment.tiff](file:///Attachment.tiff)
-
-```html
-<Best practice>
-```
-
-###### **Related**
-
-- <Concept 1>
-- <Concept 2>
-- <Concept 3>
+###### Related
+- [[Note 1]]
+- [[Note 2]]
+- [[Note 3]]
