@@ -11,14 +11,10 @@
             "id": "3db037c5aeb51f6a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RoadMap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "RoadMap"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -31,8 +27,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -208,11 +203,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "31777c068d0d7b50",
+  "active": "3db037c5aeb51f6a",
   "lastOpenFiles": [
+    "RoadMap.md",
     "Untitled.canvas",
     "note Format.md",
-    "RoadMap.md",
     "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
     "DI/Coding - Third-party DI (@Provides).md",
     "DI/Hilt - Third-party with @Provides.md",
