@@ -241,10 +241,10 @@
   "active": "3db037c5aeb51f6a",
   "lastOpenFiles": [
     "DI/Layers in Hilt Architecture.md",
-    "DI/Hilt.md",
     "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
-    "DI/Injection.md",
     "DI/Dependency Injection.md",
+    "DI/Injection.md",
+    "DI/Hilt.md",
     "RoadMap.md",
     "Untitled.base",
     "note Format.md",

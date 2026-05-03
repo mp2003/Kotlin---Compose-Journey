@@ -49,7 +49,7 @@ class TaskViewModel(
 - You moved this decision:
     - **“How to create dependencies”**
     - from → _inside class_
-    - to → _outside system (Hilt)
+    - to → _outside system ([[Hilt]])
 
 That’s it. That’s DI.
 
@@ -154,11 +154,11 @@ fun TaskScreen(
 ###### **Full Flow (Read This Twice)**
 
 - UI requests ViewModel
-- Hilt creates ViewModel
+- [[Hilt]] creates ViewModel
 - ViewModel needs Repository
-- Hilt provides Repository
+- [[Hilt]] provides Repository
 - Repository needs ApiService
-- Hilt provides ApiService
+- [[Hilt]] provides ApiService
 - Everything is connected through constructor injection
 
 ###### **What to Avoid**
@@ -172,3 +172,7 @@ fun TaskScreen(
 
 - “Am I creating this dependency manually?”
 - If yes → move it to constructor and inject it
+
+
+[[Injection]]
+[[Hilt]]
