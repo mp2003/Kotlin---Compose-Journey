@@ -1,30 +1,31 @@
-# 🚀 Kotlin Android — Complete Revised 
+# Kotlin Android — Complete Revised
 
 ## Roadmap
-**Duration:** 8 Weeks → June 2026  
-**Starting Point:** Advanced UI State Modeling  
-**Schedule:** Evenings + Weekends (~10–12 hrs/week)  
-**Style:** 80% Coding / 20% Theory  
-**Goal:** Read, understand, and contribute to any Kotlin project  be ready 
+
+- **Duration:** 8 Weeks → June 2026
+- **Starting Point:** Advanced UI State Modeling
+- **Schedule:** Evenings + Weekends (~10–12 hrs/week)
+- **Style:** 80% Coding / 20% Theory
+- **Goal:** Read, understand, and contribute to any Kotlin project
 
 ---
 
-# ✅ Completed Chapters
+# Completed Chapters
 
-- [x] Ch 1: Kotlin Language Fundamentals  
-- [x] Ch 2: Coroutines (launch, async, suspend, scopes)  
-- [x] Ch 3: Flow & StateFlow  
-- [x] Ch 4: Flow Operators  
-- [x] Ch 5: Compose Basics  
-- [x] Ch 6: Compose State  
-- [x] Ch 7: State Hoisting  
-- [x] Ch 8: Unidirectional Data Flow  
-- [x] Ch 9: ViewModel + StateFlow  
-- [x] Ch 10: Async Data Handling  
+- [x] Ch 1: Kotlin Language Fundamentals
+- [x] Ch 2: Coroutines (launch, async, suspend, scopes)
+- [x] Ch 3: Flow & StateFlow
+- [x] Ch 4: Flow Operators
+- [x] Ch 5: Compose Basics
+- [x] Ch 6: Compose State
+- [x] Ch 7: State Hoisting
+- [x] Ch 8: Unidirectional Data Flow
+- [x] Ch 9: ViewModel + StateFlow
+- [x] Ch 10: Async Data Handling
 
 ---
 
-# 🟢 WEEK 1 — UI State Modeling (MVI)
+# WEEK 1 — UI State Modeling (MVI)  ✅ COMPLETE
 
 ## Theory
 - [x] What is MVI (Model-View-Intent)
@@ -53,16 +54,19 @@
 ### Build
 - [x] Task Manager Screen (full MVI flow)
 
+**Notes written:** MVI - Overview, State, Intent, Effect, ViewModel, onIntent, Reducer, Task Manager Exercise, Task Manager Full Code
+
 ---
 
-# 🟡 WEEK 2 — Dependency Injection (Hilt)
+# WEEK 2 — Dependency Injection (Hilt)  🟡 IN PROGRESS
 
 ## Theory
 - [x] What is DI
-- [x] Injection 
-- [ ] Scopes
-- [ ] @Provides vs @Binds
-- [ ] Dependency Inversion
+- [x] Injection (constructor injection)
+- [ ] @Provides vs @Binds (side-by-side comparison)
+- [ ] Dependency Inversion (the principle, not just DI)
+- [ ] Scopes (Singleton, ViewModel, Activity, Fragment)
+
 ## Coding
 
 ### Setup
@@ -76,15 +80,26 @@
 - [x] Bind using `@Module`
 
 ### Third-party
-- [ ] Provide Retrofit / OkHttp
-- [ ] Use qualifiers
+- [x] Provide Retrofit / OkHttp (concept covered with FakeApiService via `@Provides`)
+- [ ] Use qualifiers (`@Named`, `@Qualifier`)
 
 ### Build
 - [ ] Refactor Task Manager with Hilt
 
+**Notes written:** DI - Overview, Injection - Constructor Injection, Hilt - DI Library, Hilt - Architecture Layers, Hilt - Runtime Flow, Hilt - Third-party with @Provides
+
+**Still to do (theory):**
+- `Hilt - @Provides vs @Binds` note (side-by-side: when each one applies)
+- `Hilt - Dependency Inversion` note (the SOLID principle, why interfaces matter)
+- `Hilt - Scopes` note (Singleton, ViewModel, Activity, Fragment scopes)
+- `Hilt - Qualifiers` note (`@Named`, custom `@Qualifier`)
+
+**Still to do (build):**
+- Refactor Task Manager screen with Hilt (inject ViewModel + Repository)
+
 ---
 
-# 🌐 WEEK 3 — Networking (Retrofit + OkHttp)
+# WEEK 3 — Networking (Retrofit + OkHttp)
 
 ## Theory
 - [ ] REST APIs in Android
@@ -113,7 +128,7 @@
 
 ---
 
-# 🧭 WEEK 4 — Navigation + Compose UI
+# WEEK 4 — Navigation + Compose UI
 
 ## Theory
 - [ ] NavHost & NavController
@@ -138,7 +153,7 @@
 
 ---
 
-# 💾 WEEK 5 — Room + DataStore
+# WEEK 5 — Room + DataStore
 
 ## Theory
 - [ ] Room basics
@@ -160,7 +175,7 @@
 
 ---
 
-# 📷 WEEK 6 — Permissions + Camera + Files
+# WEEK 6 — Permissions + Camera + Files
 
 ## Theory
 - [ ] Runtime permissions
@@ -183,7 +198,7 @@
 
 ---
 
-# 🔌 WEEK 7 — Hardware Integration
+# WEEK 7 — Hardware Integration
 
 ## Theory
 - [ ] Bluetooth basics
@@ -207,7 +222,7 @@
 
 ---
 
-# 🧱 WEEK 8 — Full App + Real Code
+# WEEK 8 — Full App + Real Code
 
 ## Theory
 - [ ] Gradle basics
@@ -232,7 +247,7 @@
 
 ---
 
-# 🎯 FINAL OUTCOME
+# FINAL OUTCOME
 
 - [ ] Understand any Kotlin project
 - [ ] Trace full data flow
@@ -242,21 +257,32 @@
 
 ---
 
-# 📊 Progress Tracker
+# Progress Tracker
 
-| Week   | Status |
-| ------ | ------ |
-| Week 1 | ⬜      |
-| Week 2 | ⬜      |
-| Week 3 | ⬜      |
-| Week 4 | ⬜      |
-| Week 5 | ⬜      |
-| Week 6 | ⬜      |
-| Week 7 | ⬜      |
-| Week 8 | ⬜      |
+| Week   | Status        |
+| ------ | ------------- |
+| Week 1 | ✅ Complete    |
+| Week 2 | 🟡 In progress |
+| Week 3 | ⬜ Not started |
+| Week 4 | ⬜ Not started |
+| Week 5 | ⬜ Not started |
+| Week 6 | ⬜ Not started |
+| Week 7 | ⬜ Not started |
+| Week 8 | ⬜ Not started |
 
 ---
 
-# 🏁 June Goal
+# Current Focus
 
-> Become production-ready Kotlin Android developer 🚀
+- Finish Week 2 theory: write 4 missing notes
+    1. `Hilt - @Provides vs @Binds` (side-by-side comparison)
+    2. `Hilt - Dependency Inversion` (the principle behind DI)
+    3. `Hilt - Scopes` (Singleton, ViewModel, Activity, Fragment)
+    4. `Hilt - Qualifiers` (`@Named` and custom `@Qualifier`)
+- Then build: refactor Task Manager screen with Hilt
+
+---
+
+# June Goal
+
+> Become production-ready Kotlin Android developer
