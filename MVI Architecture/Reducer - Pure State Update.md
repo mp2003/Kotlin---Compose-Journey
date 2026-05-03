@@ -1,3 +1,7 @@
+---
+up: "[[MVI - Overview]]"
+---
+
 ###### Elevator Pitch
 - A Reducer is a pure function that takes the current State plus an Intent and returns the new State, with no side effects.
 

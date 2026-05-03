@@ -34,7 +34,19 @@
 - No inline `[[wiki-links]]` inside body sections; keep all links in Related
 - Exception: the hub note may use inline links since its job is to point at everything
 
+**Breadcrumbs frontmatter (mandatory for every non-hub note):**
+- Every note in a topic folder must start with this YAML block at the very top:
+  ```yaml
+  ---
+  up: "[[Hub Note Name]]"
+  ---
+  ```
+- The hub itself (e.g. `MVI - Overview`) has NO frontmatter — it is the root
+- A nested sub-page points UP to its parent page, not to the hub (e.g. `Task Manager - Full Code` points up to `Task Manager Screen - Exercise`)
+- This is what makes the graph render as a tree
+
 **Self-check before saving:**
+- [ ] `up::` frontmatter present (unless this note is a root hub)
 - [ ] Elevator Pitch present and is one sentence
 - [ ] Definition is one line
 - [ ] Real-World Analogy is present
@@ -45,6 +57,12 @@
 - [ ] Wiki-links in Related
 
 ---
+
+```yaml
+---
+up: "[[Hub Note Name]]"
+---
+```
 
 ###### Elevator Pitch
 - <One full sentence you would say in an interview>

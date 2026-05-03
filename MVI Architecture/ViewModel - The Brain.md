@@ -1,3 +1,7 @@
+---
+up: "[[MVI - Overview]]"
+---
+
 ###### Elevator Pitch
 - ViewModel is the brain of the screen — it receives Intents, updates State, emits Effects, and never lets UI touch business logic.
 

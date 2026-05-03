@@ -1,3 +1,7 @@
+---
+up: "[[DI - Overview]]"
+---
+
 ###### Definition
 - Injection is the process of providing dependencies to a class instead of creating them inside the class
 

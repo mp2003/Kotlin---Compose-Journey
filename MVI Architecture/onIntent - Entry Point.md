@@ -1,3 +1,7 @@
+---
+up: "[[MVI - Overview]]"
+---
+
 ###### Elevator Pitch
 - `onIntent()` is the single front door of the ViewModel — every user action enters here and gets routed to the right logic.
 

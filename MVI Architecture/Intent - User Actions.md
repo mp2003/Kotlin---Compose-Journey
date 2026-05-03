@@ -1,3 +1,7 @@
+---
+up: "[[MVI - Overview]]"
+---
+
 ###### Elevator Pitch
 - Intent is a small data object the UI sends to the ViewModel to say "the user just did this thing."
 

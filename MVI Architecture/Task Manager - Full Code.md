@@ -1,3 +1,7 @@
+---
+up: "[[Task Manager Screen - Exercise]]"
+---
+
 ###### Elevator Pitch
 - The complete copy-paste-ready code for the Task Manager exercise — ViewModel and Compose UI in one place.
 

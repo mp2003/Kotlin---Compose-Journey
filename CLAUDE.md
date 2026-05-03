@@ -47,6 +47,25 @@ Notes link to each other with Obsidian wiki-link syntax: `[[Note Name]]`. Preser
 - Keep all links in the Related section; no inline `[[wiki-links]]` in body sections
 - The hub note is the only exception — it may use inline links
 
+**Breadcrumbs frontmatter (mandatory for every non-hub note):**
+
+- Every note in a topic folder must start with this YAML block at the very top:
+  ```yaml
+  ---
+  up: "[[Hub Note Name]]"
+  ---
+  ```
+- Hub notes (Overview files) have NO frontmatter — they are roots
+- Nested sub-pages point UP to their direct parent, not to the hub
+- This is what makes the Obsidian graph render as a tree
+
+**Installed Obsidian plugins (do not disable):**
+
+- `breadcrumbs` — uses `up::` frontmatter to build a real hierarchy + side-panel tree view
+- `folder-notes` — lets a folder's hub note act as the folder's "click-to-open" page
+- `obsidian-git` — auto-commits the vault on a timer
+- `obsidian-style-settings` — theme tweaks
+
 ## User context (calibrate to this)
 
 - User is a **beginner Android/Kotlin learner studying for interviews**

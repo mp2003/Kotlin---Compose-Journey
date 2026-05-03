@@ -1,3 +1,7 @@
+---
+up: "[[DI - Overview]]"
+---
+
 ###### Definition
 - Hilt is a dependency injection library that automatically provides dependencies in Android apps
   

@@ -1,3 +1,7 @@
+---
+up: "[[MVI - Overview]]"
+---
+
 ###### Elevator Pitch
 - State is a single immutable object that describes everything the UI is currently showing on screen.
 

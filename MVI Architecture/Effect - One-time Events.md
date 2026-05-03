@@ -1,3 +1,7 @@
+---
+up: "[[MVI - Overview]]"
+---
+
 ###### Elevator Pitch
 - Effect is a one-time UI event like a toast or navigation that the ViewModel fires once and the UI reacts to without storing it.
 

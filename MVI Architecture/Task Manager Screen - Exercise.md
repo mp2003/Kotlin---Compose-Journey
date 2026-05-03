@@ -1,3 +1,7 @@
+---
+up: "[[MVI - Overview]]"
+---
+
 ###### Elevator Pitch
 - A six-step walkthrough that builds a small Task Manager screen using MVI, wiring State, Intent, Effect, ViewModel, and Compose end-to-end.
 
