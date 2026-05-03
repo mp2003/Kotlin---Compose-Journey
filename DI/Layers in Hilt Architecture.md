@@ -121,4 +121,60 @@ abstract class RepositoryModule {
   ---
 
 
-Dependency Direction (Very Important)
+#### Dependency Direction (Very Important)
+
+```
+Presentation → Domain ← Data
+         ↑
+         DI (wires everything)
+```
+
+##### **How to Think While Coding**
+
+###### **When writing ViewModel**
+
+- “I need TaskRepository”
+- Not → “I will create TaskRepositoryImpl”
+
+---
+
+###### **When writing Repository**
+
+- “I implement domain contract”
+
+---
+
+###### **When writing Module**
+
+- “If someone asks for X → give Y”
+
+---
+
+###### **Real Example Flow**
+
+1. UI asks for ViewModel
+2. Hilt creates ViewModel
+3. ViewModel needs Repository
+4. Hilt finds binding
+5. Provides implementation
+6. Data flows back to UI
+
+---
+
+##### **Why this structure matters**
+
+- You can change data source without touching UI
+- You can test ViewModel easily
+- You avoid tight coupling
+- Code becomes scalable
+
+---
+
+# **One-line Summary**
+
+- Presentation = uses
+- Domain = defines
+- Data = implements
+- DI = connects
+
+---

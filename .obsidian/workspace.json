@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/Hilt.md",
+                "file": "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hilt"
+              "title": "Dependency Injection with Hilt — Architecture & Flow Layers"
             }
           },
           {
@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Layers in Hilt Architecture.md",
+                "file": "DI/Layers in Hilt Architecture.md",
                 "mode": "source",
                 "source": false
               },
@@ -63,8 +63,7 @@
               "title": "Layers in Hilt Architecture"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,8 +121,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d75270cf3320d5ac",
@@ -225,7 +223,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -239,11 +238,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "080ac58f33c260da",
+  "active": "3db037c5aeb51f6a",
   "lastOpenFiles": [
-    "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
-    "Layers in Hilt Architecture.md",
+    "DI/Layers in Hilt Architecture.md",
     "DI/Hilt.md",
+    "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
     "DI/Injection.md",
     "DI/Dependency Injection.md",
     "RoadMap.md",
