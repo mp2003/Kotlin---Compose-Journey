@@ -1,127 +1,127 @@
-###### Explanation 
-- Acts as the central decision maker
+###### Elevator Pitch
+- ViewModel is the brain of the screen — it receives Intents, updates State, emits Effects, and never lets UI touch business logic.
+
+---
+
+###### Definition
+- A class that holds the screen's State and Effect streams and processes Intents through a single `onIntent()` entry point
+
+---
+
+###### Real-World Analogy
+- Like a restaurant kitchen
+- Waiter (UI) takes orders (Intents)
+- Kitchen (ViewModel) cooks (logic)
+- Plates the food (State) and rings the bell once (Effect)
+- Customers never enter the kitchen
+
+---
+
+###### What
 - Receives user actions (Intent)
 - Updates UI data (State)
 - Emits one-time events (Effect)
-- UI never contains business logic
+- Holds business logic (UI never does)
 
-###### What
-- A layer that handles logic and manages State & Effect
+---
 
 ###### Why
-- Separates UI from business logic
-- Centralizes all decisions
-- Makes app predictable and testable
+- Separates UI from logic
+- Centralizes all decisions in one place
+- Survives configuration changes (rotation)
+- Makes testing easy — no UI needed
+
+---
 
 ###### Core Concepts
-- Holds State (StateFlow)
-- Emits Effect (SharedFlow)
-- Processes Intent via onIntent()
-- Contains business logic only
+- Holds State as `StateFlow`
+- Emits Effect as `SharedFlow`
+- Processes Intent via `onIntent()`
+- Contains business logic only — no UI code
 
-###### Flow / How it Works
+---
+
+###### How it Works
 - UI sends Intent
-- ViewModel receives Intent
-- ViewModel processes logic
+- ViewModel receives via `onIntent()`
+- ViewModel runs logic
 - ViewModel updates State
-- ViewModel emits Effect (if needed)
+- ViewModel emits Effect if needed
 - UI reacts to State and Effect
 
-## Example (Kotlin)
+---
+
+###### Example
 
 ```kotlin
 class TaskViewModel : ViewModel() {
 
+    // private holder, only ViewModel can change
     private val _state = MutableStateFlow(UiState())
+    // public read-only, UI observes this
     val state = _state
 
+    // private emitter for one-time events
     private val _effect = MutableSharedFlow<UiEffect>()
     val effect = _effect
 
+    // single entry point for all user actions
     fun onIntent(intent: UiIntent) {
         when (intent) {
-
             is UiIntent.Add -> {
-                _state.update {
-                    it.copy(items = it.items + intent.item)
-                }
+                _state.update { it.copy(items = it.items + intent.item) }
             }
-
             is UiIntent.Delete -> {
-                _state.update {
-                    it.copy(items = it.items - intent.item)
-                }
+                _state.update { it.copy(items = it.items - intent.item) }
             }
         }
     }
 }
 ```
 
-###### ❌ Common Mistake
-
-- Calling ViewModel functions directly from UI
-
-```kotlin
-viewModel.addTask("Task")
-````
-
-###### **Why It’s Wrong**
-
-- Breaks **Unidirectional Data Flow**
-- UI controls business logic (not allowed in MVI)
-- Turns architecture closer to MVVM instead of true MVI
-
 ---
 
-###### **Solution**
+###### Common Mistakes
+- BAD: Calling `viewModel.addTask(...)` directly from UI -> breaks unidirectional flow
+- BAD: Mutating state with `_state.value.items.add(...)` -> StateFlow may not emit
+- BAD: Doing UI work inside ViewModel (e.g. building Toast objects)
 
-- Always send **Intent** from UI
-
+**Wrong:**
 ```kotlin
-viewModel.onIntent(UiIntent.Add("Task"))
+viewModel.addTask("Task")   // BAD: skips Intent
+```
+
+**Right:**
+```kotlin
+viewModel.onIntent(UiIntent.Add("Task"))   // OK: goes through Intent
 ```
 
 ---
 
-###### Common Mistake
-
-- Mutating state directly inside ViewModel
-
-```kotlin
-fun onIntent(intent: UiIntent) {
-    when(intent) {
-        is UiIntent.Add -> _state.value.items.add(intent.item)
-    }
-}
-```
-
-
-###### **Why It’s Wrong**
-
-- Breaks **immutability**
-- `StateFlow` may NOT emit updates properly
-- UI might not recompose/update
-- Leads to unpredictable bugs
+###### Common Follow-up Traps
+- Q: Why one `onIntent()` entry point?
+  A: Centralizes all actions, easier to log, debug, and test.
+- Q: Why expose `StateFlow` instead of `LiveData`?
+  A: Coroutine-native and works on any platform.
+- Q: Should ViewModel know about Compose?
+  A: No — it stays UI-framework-free.
 
 ---
 
-######  Solution
+###### Memory Hook
+- "ViewModel = kitchen. Waiter brings orders, kitchen cooks, customers wait outside."
 
-- Always create a **new state copy**
+---
 
-```kotlin
-fun onIntent(intent: UiIntent) {
-    when(intent) {
-        is UiIntent.Add -> {
-            _state.update {
-                it.copy(items = it.items + intent.item)
-            }
-        }
-    }
-}
-```
+###### Key Rule
+- UI sends Intent; ViewModel decides everything else
 
-###### **Rule**
+---
 
-Never mutate state  
-Always replace state with a new copy
+###### Related
+- [[MVI Architecture]]
+- [[State]]
+- [[Intent]]
+- [[Effect]]
+- [[onIntent]]
+- [[Reducer]]

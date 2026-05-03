@@ -1,90 +1,122 @@
-- Entry point for all user actions from UI
-- UI sends Intent instead of calling multiple functions
-- ViewModel receives and decides what to do
-- Routes action to correct logic or reducer
-- Keeps flow centralized and predictable
+###### Elevator Pitch
+- `onIntent()` is the single front door of the ViewModel — every user action enters here and gets routed to the right logic.
+
+---
+
+###### Definition
+- A function inside the ViewModel that takes a `UiIntent` and decides what to do with it
+
+---
+
+###### Real-World Analogy
+- Like a hotel reception desk
+- Every guest request goes through reception
+- Reception does not cook the food or clean the room
+- It just routes the request to the right department
 
 ---
 
 ###### What
-- A function that handles all user Intents in [[ViewModel]]
+- Single entry point for all user actions
+- Receives one Intent at a time
+- Uses `when(intent)` to route
+- Calls reducer or internal helpers
 
 ---
 
 ###### Why
-- Avoids multiple public functions in ViewModel
-- Centralizes all user actions in one place
-- Makes debugging and tracking easier
-- Keeps UI simple (UI only sends Intent)
+- Avoids dozens of public ViewModel functions
+- Centralizes all user actions
+- Makes logging and debugging trivial
+- Keeps UI dumb — it only calls `onIntent()`
 
 ---
 
 ###### Core Concepts
-- Single entry point function
-- Accepts UiIntent as parameter
-- Uses when(intent) to decide action
-- Can call reducer or internal functions
+- Single function, single parameter
+- Routes via `when(intent)`
 - Updates State or emits Effect
+- Heavy logic goes elsewhere (reducer or private helpers)
 
 ---
 
 ###### How it Works
 - UI sends Intent
-- onIntent() receives it
-- when(intent) decides what to do
-- ViewModel processes logic
-- State is updated OR Effect is emitted
-- UI reacts to changes
+- `onIntent()` receives it
+- `when(intent)` picks the matching branch
+- ViewModel updates State or emits Effect
+- UI reacts
 
 ---
 
-###### Weak Area Clarification (IMPORTANT)
-- onIntent is NOT business logic
-  → it only routes actions
+###### Example
 
-- Heavy logic should NOT be written here
-  → move to reducer or separate functions
-
-- onIntent does NOT update UI directly
-  → it updates State or emits Effect
-
----
-
-###### Common Confusion
-- "onIntent is same as function call"
-  → No, it is a centralized entry point
-
-- "UI can call ViewModel functions directly"
-  → In MVI, UI should ONLY call onIntent()
-
-- "All logic should be inside onIntent"
-  → Keep it small, delegate logic
-
----
-
-###### Common Mistakes
-- Writing large when(intent) blocks
-- Putting business logic directly inside onIntent
-- Creating multiple public functions instead of one entry point
-- Updating UI directly from ViewModel
-
----
-
-###### Example (Kotlin)
 ```kotlin
 fun onIntent(intent: UiIntent) {
     when (intent) {
 
         is UiIntent.Add -> {
-            _state.update {
-                it.copy(items = it.items + intent.item)
-            }
+            // delegates to a private function
+            addItem(intent.item)
         }
 
         is UiIntent.Delete -> {
-            _state.update {
-                it.copy(items = it.items - intent.item)
-            }
+            deleteItem(intent.item)
         }
     }
 }
+
+// Private helpers keep onIntent slim
+private fun addItem(item: String) {
+    _state.update { it.copy(items = it.items + item) }
+}
+
+private fun deleteItem(item: String) {
+    _state.update { it.copy(items = it.items - item) }
+}
+```
+
+---
+
+###### Weak Area Clarification
+- `onIntent()` is NOT business logic — it only routes
+- Heavy logic should NOT live inside `when` branches
+- `onIntent()` does NOT update UI directly — it updates State or emits Effect
+
+---
+
+###### Common Mistakes
+- BAD: Writing huge logic blocks inside each `when` branch
+- BAD: Creating multiple public functions instead of one entry point
+- BAD: Updating UI directly from `onIntent`
+- BAD: Forgetting to handle a new Intent (sealed class will warn you)
+
+---
+
+###### Common Follow-up Traps
+- Q: Why one entry point instead of multiple methods?
+  A: Easier to log, replay, and test — every action funnels through one place.
+- Q: Should `onIntent` be `suspend`?
+  A: No — keep it sync; launch coroutines inside branches if needed.
+- Q: Can a single Intent trigger State + Effect?
+  A: Yes — update State, then emit Effect inside the same branch.
+
+---
+
+###### Memory Hook
+- "onIntent = reception desk. Route, never cook."
+
+---
+
+###### Key Rule
+- Route in `onIntent`, do the work elsewhere
+
+---
+
+###### Related
+- [[MVI Architecture]]
+- [[Intent]]
+- [[State]]
+- [[Effect]]
+- [[ViewModel]]
+- [[Reducer]]

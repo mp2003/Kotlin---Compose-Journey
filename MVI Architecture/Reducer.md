@@ -1,110 +1,128 @@
-- Responsible for updating state based on Intent
-- Takes current state and user action as input
-- Returns a new updated state
-- Keeps state update logic separate from ViewModel
-- Makes logic predictable and easier to manage
+###### Elevator Pitch
+- A Reducer is a pure function that takes the current State plus an Intent and returns the new State, with no side effects.
 
 ---
-##### What
-- A function that converts (oldState + intent) → newState
+
+###### Definition
+- A function with the shape `(state, intent) -> newState`
+
+---
+
+###### Real-World Analogy
+- Like a cashier at a checkout
+- You hand over a receipt (state) and a new item (intent)
+- Cashier returns a new updated receipt
+- Cashier never calls the supplier or rings the doorbell — that is someone else's job
+
+---
+
+###### What
+- Updates state based on Intent
+- Takes (current state + intent) as input
+- Returns a new state
+- Keeps update logic separate from ViewModel
 
 ---
 
 ###### Why
-- Avoids large and messy onIntent() functions
-- Separates decision logic from state update logic
-- Makes code easier to test and scale
-- Keeps state updates consistent and centralized
+- Avoids huge `onIntent()` functions
+- Splits "decide" from "do"
+- Easy to unit-test (pure function)
+- Keeps state updates consistent
 
 ---
 
 ###### Core Concepts
-- Pure function (no side effects inside)
-- Takes current state as input
-- Takes intent/action as input
-- Returns new state using copy()
-- Does not mutate existing state
+- Pure function — no side effects
+- Inputs: current state + intent
+- Output: new state via `.copy()`
+- Never mutates the old state
+- Never calls APIs or emits Effects
 
 ---
 
 ###### How it Works
 - UI sends Intent
-- ViewModel receives Intent
-- ViewModel passes (state + intent) to Reducer
+- ViewModel receives it
+- ViewModel calls `reducer(state, intent)`
 - Reducer returns new state
 - ViewModel updates StateFlow
 - UI re-renders
 
 ---
 
-###### Weak Area Clarification (IMPORTANT)
-- Reducer ONLY updates state
-- Reducer should NOT:
-  - call API
-  - emit Effect
-  - perform side effects
-- Side effects are handled separately in ViewModel
+###### Example
 
----
-
-###### Common Confusion
-- "Reducer replaces ViewModel"
-  → No, it only handles state updates
-- "Reducer can do API calls"
-  → Wrong, it must be pure
-- "Reducer mutates state"
-  → Wrong, always return new state
-
----
-
-###### Common Mistakes
-- Writing logic directly inside onIntent()
-- Mutating state instead of using copy()
-- Mixing side effects inside reducer
-- Not using reducer for complex screens
-
----
-
-###### Example (Kotlin)
 ```kotlin
+// Pure function: same input always gives same output
 fun reducer(state: UiState, intent: UiIntent): UiState {
     return when (intent) {
 
         is UiIntent.Add -> {
-            state.copy(
-                items = state.items + intent.item
-            )
+            // new state with the new item appended
+            state.copy(items = state.items + intent.item)
         }
 
         is UiIntent.Delete -> {
-            state.copy(
-                items = state.items - intent.item
-            )
+            // new state with the item removed
+            state.copy(items = state.items - intent.item)
         }
 
-        else -> state
+        else -> state   // no change
     }
 }
-````
+```
 
----
-
-###### **Usage in ViewModel**
-
+**Used inside ViewModel:**
 ```kotlin
 fun onIntent(intent: UiIntent) {
-    _state.update { currentState ->
-        reducer(currentState, intent)
+    _state.update { current ->
+        reducer(current, intent)
     }
 }
 ```
 
 ---
 
-###### **Related Concepts**
+###### Weak Area Clarification
+- Reducer ONLY updates state
+- Reducer does NOT call APIs
+- Reducer does NOT emit Effects
+- Side effects belong in the ViewModel, not here
 
-[[MVI Architecture]]  
-[[State]]  
-[[Intent]]  
-[[onIntent]]  
-[[ViewModel]]
+---
+
+###### Common Mistakes
+- BAD: Writing logic directly inside `onIntent` and skipping the reducer
+- BAD: Mutating state instead of using `.copy()`
+- BAD: Calling network or DB code inside the reducer
+- BAD: Emitting Effects from the reducer
+
+---
+
+###### Common Follow-up Traps
+- Q: Does every screen need a reducer?
+  A: No — small screens can do it inline; reducers shine when state logic is complex.
+- Q: Why must it be pure?
+  A: Predictable, testable, and easy to reason about.
+- Q: Reducer vs `onIntent`?
+  A: `onIntent` routes; reducer transforms state.
+
+---
+
+###### Memory Hook
+- "Reducer = cashier. Old receipt + new item = new receipt."
+
+---
+
+###### Key Rule
+- Pure function. State in, state out. Nothing else.
+
+---
+
+###### Related
+- [[MVI Architecture]]
+- [[State]]
+- [[Intent]]
+- [[onIntent]]
+- [[ViewModel]]

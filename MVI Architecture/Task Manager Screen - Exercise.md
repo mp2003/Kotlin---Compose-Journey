@@ -1,55 +1,98 @@
-#### **STEP 1 — DEFINE STATE**
+###### Elevator Pitch
+- A six-step walkthrough that builds a small Task Manager screen using MVI, wiring State, Intent, Effect, ViewModel, and Compose end-to-end.
 
-👉 Ask:  “What does UI show?”
-- Answer:
-	- List of tasks
-	- Loading
+---
 
-``` kotlin
+###### Definition
+- A practice exercise that turns the MVI theory into a working screen with add and delete actions
+
+---
+
+###### Real-World Analogy
+- Like assembling IKEA furniture
+- Each step has one job
+- Skip a step and the screen wobbles
+- All six steps together = a complete unit
+
+---
+
+###### What
+- A small screen that lists tasks
+- User can add a task
+- User can delete a task
+- Toast appears when a task is deleted
+
+---
+
+###### Why
+- Cements MVI by typing it out yourself
+- Forces you to use State, Intent, Effect together
+- Reveals weak spots before bigger screens
+
+---
+
+###### Core Concepts
+- State -> data class -> StateFlow
+- Intent -> sealed class
+- Effect -> sealed class -> SharedFlow
+- Update -> `.copy()`
+- Emit -> `launch { emit() }`
+- Entry -> `onIntent()`
+- Link: [[MVI Architecture]], [[State]], [[Intent]], [[Effect]], [[ViewModel]], [[onIntent]]
+
+---
+
+###### Step 1 — Define State
+
+Ask: "What does the UI show?"
+- A list of tasks
+- A loading flag
+
+```kotlin
+// Holds everything the screen needs to draw itself
 data class TaskState(
-    val tasks: List<String> = emptyList(),
-    val isLoading: Boolean = false
+    val tasks: List<String> = emptyList(),  // visible task list
+    val isLoading: Boolean = false           // spinner flag
 )
 ```
 
-###### **Remember**
-- Holds UI **data**
+- Holds UI data only
 - Always immutable
-- Use copy() to update
+- Update with `.copy()`
+
 ---
 
-#### **STEP 2 — DEFINE INTENT**
+###### Step 2 — Define Intent
 
-👉 Ask:  “What can user do?”
-- Answer:
-	- Add task
-	- Delete task
+Ask: "What can the user do?"
+- Add a task
+- Delete a task
 
-``` kotlin
+```kotlin
+// Closed set of user actions
 sealed class TaskIntent {
     data class AddTask(val task: String) : TaskIntent()
     data class DeleteTask(val task: String) : TaskIntent()
 }
 ```
 
-###### **Remember**
 - Only user actions
 - No logic inside
 - Just data
----
-#### **STEP 3 — DEFINE EFFECT**
 
-👉 Ask:   “What happens once?”
-- Answer:
-	- Show toast
+---
+
+###### Step 3 — Define Effect
+
+Ask: "What happens once?"
+- Show a toast when a task is deleted
 
 ```kotlin
+// One-time UI events
 sealed class TaskEffect {
     data class ShowToast(val message: String) : TaskEffect()
 }
 ```
-
-###### **Remember**
 
 - One-time event
 - NOT stored in state
@@ -57,268 +100,89 @@ sealed class TaskEffect {
 
 ---
 
-#### **STEP 4 — CREATE VIEWMODEL (BASIC STRUCTURE)**
+###### Step 4 — ViewModel skeleton
 
-```kotlin 
+```kotlin
 class TaskViewModel : ViewModel() {
-    private val _state = MutableStateFlow(TaskState())
-    val state = _state
 
+    // private holder, only ViewModel writes
+    private val _state = MutableStateFlow(TaskState())
+    val state = _state                 // public read-only
+
+    // private emitter for one-time events
     private val _effect = MutableSharedFlow<TaskEffect>()
     val effect = _effect
 }
 ```
 
-###### **Remember**
-
-- State → StateFlow
-- Effect → SharedFlow
-- Expose as read-only (later improvement)
+- State -> StateFlow
+- Effect -> SharedFlow
+- Expose as read-only
 
 ---
 
-##### **STEP 5 — ADD onIntent()**
+###### Step 5 — Add `onIntent()`
 
-👉 This is your entry point
+Single entry point for every user action.
 
-```kotlin 
+```kotlin
 fun onIntent(intent: TaskIntent) {
     when (intent) {
-
-        is TaskIntent.AddTask -> {
-            addTask(intent.task)
-        }
-
-        is TaskIntent.DeleteTask -> {
-            deleteTask(intent.task)
-        }
+        is TaskIntent.AddTask    -> addTask(intent.task)
+        is TaskIntent.DeleteTask -> deleteTask(intent.task)
     }
 }
 ```
 
-###### **Remember**
-
 - Single entry point
-- Do NOT write heavy logic here
-- Just route actions
+- No heavy logic here
+- Just route the action
 
 ---
 
-#### STEP 6 - Handle Logic 
+###### Step 6 — Handle the logic
 
 ```kotlin
+// Pure state update, no side effect
 private fun addTask(task: String) {
     _state.update {
         it.copy(tasks = it.tasks + task)
     }
 }
 
+// State update + one-time toast
 private fun deleteTask(task: String) {
     _state.update {
         it.copy(tasks = it.tasks - task)
     }
 
+    // 'launch' opens a coroutine; 'emit' sends one event
     viewModelScope.launch {
         _effect.emit(TaskEffect.ShowToast("Task Deleted"))
     }
 }
-
 ```
 
+- Add updates State only
+- Delete updates State AND emits Effect
 
 ---
 
-###### Points to remember
-	State  → data class → StateFlow
-	Intent → sealed class
-	Effect → sealed class → SharedFlow
-
-	Update → copy()
-	Emit   → launch { emit() }
-	Entry  → onIntent()
-
-
-
-##### Full Code
-
-```kotlin
-# TaskViewModel.kt
-
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
-
-// ----------------------
-// STATE
-// ----------------------
-data class TaskState(
-    val tasks: List<String> = emptyList(),
-    val isLoading: Boolean = false
-)
-
-// ----------------------
-// INTENT
-// ----------------------
-sealed class TaskIntent {
-    data class AddTask(val task: String) : TaskIntent()
-    data class DeleteTask(val task: String) : TaskIntent()
-}
-
-// ----------------------
-// EFFECT
-// ----------------------
-sealed class TaskEffect {
-    data class ShowToast(val message: String) : TaskEffect()
-}
-
-// ----------------------
-// VIEWMODEL
-// ----------------------
-class TaskViewModel : ViewModel() {
-
-    // StateFlow (UI State)
-    private val _state = MutableStateFlow(TaskState())
-    val state = _state
-
-    // SharedFlow (One-time events)
-    private val _effect = MutableSharedFlow<TaskEffect>()
-    val effect = _effect
-
-    // Entry point for all user actions
-    fun onIntent(intent: TaskIntent) {
-        when (intent) {
-
-            is TaskIntent.AddTask -> {
-                addTask(intent.task)
-            }
-
-            is TaskIntent.DeleteTask -> {
-                deleteTask(intent.task)
-            }
-        }
-    }
-
-    // ----------------------
-    // INTERNAL LOGIC
-    // ----------------------
-
-    private fun addTask(task: String) {
-        _state.update {
-            it.copy(tasks = it.tasks + task)
-        }
-    }
-
-    private fun deleteTask(task: String) {
-        _state.update {
-            it.copy(tasks = it.tasks - task)
-        }
-
-        viewModelScope.launch {
-            _effect.emit(TaskEffect.ShowToast("Task Deleted"))
-        }
-    }
-}
-```
-
-
-#### TaskScreen (Compose UI)
+###### Memory Hook
+- "Six steps: State, Intent, Effect, ViewModel, onIntent, Logic."
 
 ---
 
-##### What this does
-- Observes State from ViewModel
-- Sends Intent to ViewModel
-- Collects Effect (toast)
+###### Key Rule
+- Build in this order — every step depends on the one before it
 
 ---
 
-## Compose UI
-
-```kotlin
-package com.milind.composeplayground
-
-import android.widget.Toast
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
-
-@Composable
-fun TaskScreen(
-    viewModel: TaskViewModel = viewModel()
-) {
-
-    // 1. Collect State
-    val state by viewModel.state.collectAsState()
-
-    // 2. Context for Toast
-    val context = LocalContext.current
-
-    // 3. Collect Effect (ONE TIME)
-    LaunchedEffect(Unit) {
-        viewModel.effect.collect { effect ->
-            when (effect) {
-                is TaskEffect.ShowToast -> {
-                    Toast.makeText(context, effect.message, Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-    }
-
-    // 4. UI Layout
-    Column(modifier = Modifier.padding(16.dp)) {
-
-        var text by remember { mutableStateOf("") }
-
-        // Input + Add Button
-        Row {
-            TextField(
-                value = text,
-                onValueChange = { text = it },
-                modifier = Modifier.weight(1f)
-            )
-
-            Spacer(modifier = Modifier.width(8.dp))
-
-            Button(onClick = {
-                if (text.isNotEmpty()) {
-                    viewModel.onIntent(TaskIntent.AddTask(text))
-                    text = ""
-                }
-            }) {
-                Text("Add")
-            }
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Task List
-        LazyColumn {
-            items(state.task) { item ->
-
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Text(text = item)
-
-                    Button(onClick = {
-                        viewModel.onIntent(TaskIntent.DeleteTask(item))
-                    }) {
-                        Text("Delete")
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(8.dp))
-            }
-        }
-    }
-}
+###### Related
+- [[Task Manager - Full Code]]
+- [[MVI Architecture]]
+- [[State]]
+- [[Intent]]
+- [[Effect]]
+- [[ViewModel]]
+- [[onIntent]]
