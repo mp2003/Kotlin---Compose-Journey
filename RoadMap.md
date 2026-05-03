@@ -59,11 +59,11 @@
 
 ## Theory
 - [x] What is DI
+- [ ] Injection 
 - [ ] Hilt vs Koin
 - [ ] Scopes
 - [ ] @Provides vs @Binds
 - [ ] Dependency Inversion
-
 ## Coding
 
 ### Setup
