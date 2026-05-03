@@ -60,21 +60,20 @@
 ## Theory
 - [x] What is DI
 - [x] Injection 
-- [ ] Hilt vs Koin
 - [ ] Scopes
 - [ ] @Provides vs @Binds
 - [ ] Dependency Inversion
 ## Coding
 
 ### Setup
-- [ ] Add Hilt dependencies
-- [ ] Create `@HiltAndroidApp`
-- [ ] Annotate Activity
+- [x] Add Hilt dependencies
+- [x] Create `@HiltAndroidApp`
+- [x] Annotate Activity
 
 ### Injection
-- [ ] Create Repository interface
-- [ ] Implement with `@Inject`
-- [ ] Bind using `@Module`
+- [x] Create Repository interface
+- [x] Implement with `@Inject`
+- [x] Bind using `@Module`
 
 ### Third-party
 - [ ] Provide Retrofit / OkHttp
