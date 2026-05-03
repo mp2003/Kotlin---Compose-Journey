@@ -175,7 +175,7 @@
         "readable_line_width": true
       },
       "trail": {
-        "enabled": true,
+        "enabled": false,
         "format": "path",
         "selection": "all",
         "default_depth": 999,

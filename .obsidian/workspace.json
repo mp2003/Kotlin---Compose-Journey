@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/Intent - User Actions.md",
+                "file": "MVI Architecture/onIntent - Entry Point.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Intent - User Actions"
+              "title": "onIntent - Entry Point"
             }
           }
         ]
@@ -182,8 +182,8 @@
             "state": {
               "type": "bc-tree-view",
               "state": {},
-              "icon": "tree-pine",
-              "title": "Tree view"
+              "icon": "lucide-ghost",
+              "title": "bc-tree-view"
             }
           },
           {
@@ -192,8 +192,8 @@
             "state": {
               "type": "bc-matrix-view",
               "state": {},
-              "icon": "blinds",
-              "title": "Matrix view"
+              "icon": "lucide-ghost",
+              "title": "bc-matrix-view"
             }
           }
         ],
@@ -218,19 +218,20 @@
   },
   "active": "45fef640c8366dae",
   "lastOpenFiles": [
-    "MVI Architecture/Task Manager Screen - Exercise.md",
-    "DI/Hilt - Architecture Layers.md",
-    "DI/Hilt - DI Library.md",
-    "DI/DI - Overview.md",
-    "DI/Injection - Constructor Injection.md",
-    "DI/Hilt - Runtime Flow.md",
-    "MVI Architecture/MVI - Overview.md",
     "DI/Hilt - Third-party with @Provides.md",
+    "DI/Hilt - DI Library.md",
+    "DI/Hilt - Architecture Layers.md",
+    "DI/Hilt - Runtime Flow.md",
+    "DI/DI - Overview.md",
+    "CLAUDE.md",
+    "MVI Architecture/MVI - Overview.md",
+    "DI/Injection - Constructor Injection.md",
+    "MVI Architecture/Intent - User Actions.md",
+    "MVI Architecture/Task Manager Screen - Exercise.md",
     "note Format.md",
     "Untitled.canvas",
     "Related Note 2.md",
     "MVI Architecture/State - UI Data.md",
-    "MVI Architecture/Intent - User Actions.md",
     "MVI Architecture/Effect - One-time Events.md",
     "MVI Architecture/Task Manager - Full Code.md",
     "RoadMap.md",
@@ -243,7 +244,6 @@
     "MVI Architecture/Effect.md",
     "MVI Architecture/Intent.md",
     "DI/Dependency Injection.md",
-    "CLAUDE.md",
     "Untitled.base",
     "DI",
     "MVI Architecture",
