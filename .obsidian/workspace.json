@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/Coding - Third-party DI (@Provides).md",
+                "file": "note Format.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Coding - Third-party DI (@Provides)"
+              "title": "note Format"
             }
           },
           {
@@ -255,9 +255,9 @@
   },
   "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
+    "DI/Coding - Third-party DI (@Provides).md",
     "note Format.md",
     "CLAUDE.md",
-    "DI/Coding - Third-party DI (@Provides).md",
     "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
     "DI/Hilt.md",
     "RoadMap.md",
