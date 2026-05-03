@@ -18,30 +18,36 @@ The user is studying Android development and writes notes here as they learn. Wh
 
 Notes link to each other with Obsidian wiki-link syntax: `[[Note Name]]`. Preserve these — they form the graph view the user navigates by.
 
-## Note format (strict)
+## Note format (authoritative source)
 
-When creating a new study note, follow `note Format.md` exactly. The structure is:
+- Read `note Format.md` first — it is both the template and the rulebook
+- The "How to Use This Template" section at the top is authoritative
+- Do not re-derive rules from existing notes — most pre-date the current template
+- Existing notes get reformatted on demand when the user pastes them
 
-1. `###### **Definition**` — one-line definition in an `html` code block
-2. `###### **What**` — key idea in plain language
-3. `###### **Why**` — benefit / motivation
-4. `###### **Core Concepts**` — bullet list, with `[[wiki-links]]` to related notes
-5. `###### **How it Works**` — numbered steps
-6. `###### **Flow (Optional)**`
-7. `###### **Usage**` — including "When NOT to use it"
-8. `###### **Example**` — fenced code block, language-tagged (usually `kotlin`)
-9. `###### **Edge Cases**`
-10. `###### **Common Mistakes**`
-11. `###### **Interview Points**` — one-liner explanation
-12. `###### **Notes**` — best practice
-13. `###### **Related**` — `[[wiki-links]]`
+**Hard rules (do not break):**
 
-Conventions observed in existing notes:
-- Headings use `######` (h6) — Obsidian renders these as small section headers. Do not promote to `##`/`###`.
-- Sections are separated by `---` horizontal rules.
-- Code examples are Kotlin and short; prefer the minimum example that shows the pattern.
-- Cross-reference siblings with `[[Note Name]]` (e.g., a DI note links `[[Hilt]]`, `[[Injection]]`).
-- Not every section is mandatory — existing notes (e.g. `MVI Architecture.md`, `Dependency Injection.md`) omit sections that don't apply. Match the depth of nearby notes on the same topic; don't pad.
+- No emojis — use `->`, `OK`, `BAD`, `[ x ]` instead
+- Every section is bullet points, NOT paragraphs
+- One idea per bullet, short
+- Elevator Pitch is the only full sentence allowed
+- Three mandatory sections: Elevator Pitch, Definition, Memory Hook
+- Real-World Analogy is required (short bullets)
+- Code comments must be line-by-line, plain English
+- Small code blocks during explanation, one Full Example at the end
+- ASCII flowcharts only when there is a flow — inside ` ```text ` blocks
+- All headings use `######` (h6), separated by `---`
+- Cross-reference siblings with `[[Note Name]]`
+- Define every technical word inline
+
+## User context (calibrate to this)
+
+- User is a **beginner Android/Kotlin learner studying for interviews**
+- Re-reads notes repeatedly to generate insights
+- Visual learner — connects dots through analogies and flowcharts
+- Long text creates phobia — keep everything as short bullet points
+- Plain language always — define jargon inline
+- Match existing depth of sibling notes — do not pad
 
 ## Working in the vault
 
