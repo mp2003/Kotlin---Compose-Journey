@@ -1,5 +1,5 @@
 {
-  "is_dirty": true,
+  "is_dirty": false,
   "edge_fields": [
     {
       "label": "up"
@@ -175,8 +175,8 @@
         "readable_line_width": true
       },
       "trail": {
-        "enabled": true,
-        "format": "grid",
+        "enabled": false,
+        "format": "path",
         "selection": "all",
         "default_depth": 999,
         "no_path_message": "",
@@ -241,16 +241,17 @@
           "prevs"
         ],
         "lock_view": false,
-        "lock_path": ""
+        "lock_path": "MVI Architecture/Task Manager Screen - Exercise.md"
       },
       "tree": {
         "collapse": false,
         "show_attributes": [],
         "merge_fields": false,
-        "default_depth": 999,
+        "default_depth": 5,
         "lock_view": false,
-        "lock_path": "",
+        "lock_path": "MVI Architecture/Task Manager Screen - Exercise.md",
         "field_group_labels": [
+          "ups",
           "downs"
         ],
         "edge_sort_id": {
