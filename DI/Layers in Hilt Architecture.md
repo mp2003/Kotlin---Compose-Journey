@@ -129,6 +129,7 @@ Presentation → Domain ← Data
          DI (wires everything)
 ```
 
+
 ##### **How to Think While Coding**
 
 ###### **When writing ViewModel**
@@ -178,3 +179,5 @@ Presentation → Domain ← Data
 - DI = connects
 
 ---
+
+[[Hilt]]

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
+                "file": "DI/Layers in Hilt Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dependency Injection with Hilt — Architecture & Flow Layers"
+              "title": "Layers in Hilt Architecture"
             }
           },
           {
@@ -109,7 +109,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTimeReverse",
+                "sortOrder": "byCreatedTimeReverse",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -240,19 +240,19 @@
   },
   "active": "3db037c5aeb51f6a",
   "lastOpenFiles": [
-    "DI/Layers in Hilt Architecture.md",
-    "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
+    "note Format.md",
+    "RoadMap.md",
     "DI/Dependency Injection.md",
+    "DI/Layers in Hilt Architecture.md",
+    "MVI Architecture/State.md",
+    "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
     "DI/Injection.md",
     "DI/Hilt.md",
-    "RoadMap.md",
     "Untitled.base",
-    "note Format.md",
     "Untitled.canvas",
     "MVI Architecture/Intent.md",
     "MVI Architecture/onIntent.md",
     "MVI Architecture/ViewModel.md",
-    "MVI Architecture/State.md",
     "MVI Architecture/Effect.md",
     "MVI Architecture/MVI Architecture.md",
     "DI",

@@ -1,4 +1,3 @@
-Here is your content converted into a **clean, Obsidian-ready Markdown file**:
 ## [[Layers in Hilt Architecture]]
 ```
 
@@ -104,3 +103,5 @@ Hilt always answers 3 questions:
 ## One-Line Summary
 
 - Hilt manages object creation, wiring, and lifecycle automatically.
+
+[[Dependency Injection]]
