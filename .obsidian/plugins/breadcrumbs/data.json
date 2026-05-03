@@ -1,5 +1,5 @@
 {
-  "is_dirty": false,
+  "is_dirty": true,
   "edge_fields": [
     {
       "label": "up"
@@ -247,11 +247,10 @@
         "collapse": false,
         "show_attributes": [],
         "merge_fields": false,
-        "default_depth": 5,
+        "default_depth": 999,
         "lock_view": false,
         "lock_path": "",
         "field_group_labels": [
-          "ups",
           "downs"
         ],
         "edge_sort_id": {

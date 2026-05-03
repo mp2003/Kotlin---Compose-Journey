@@ -98,7 +98,7 @@ up: "[[Hub Note Name]]"
 - <Concept 1> -> <one-line plain meaning>
 - <Concept 2> -> <one-line plain meaning>
 - <Concept 3> -> <one-line plain meaning>
-- Link: [[Related Note 1]], [[Related Note 2]]
+- Link: [[]], [[]]
 
 ---
 
@@ -227,6 +227,4 @@ class MyViewModel : ViewModel() {
 ---
 
 ###### Related
-- [[Note 1]]
-- [[Note 2]]
-- [[Note 3]]
+- wiki links 
