@@ -85,3 +85,5 @@ abstract class RepositoryModule {
 ###### **Key Rule**
 
 - Class should declare dependencies, not create them
+
+
