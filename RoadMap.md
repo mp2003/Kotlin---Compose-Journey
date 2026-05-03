@@ -59,7 +59,7 @@
 
 ## Theory
 - [x] What is DI
-- [ ] Injection 
+- [x] Injection 
 - [ ] Hilt vs Koin
 - [ ] Scopes
 - [ ] @Provides vs @Binds

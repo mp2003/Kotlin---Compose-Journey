@@ -16,10 +16,32 @@
 ###### **Example**
 
 ```kotlin
-@HiltViewModel
-class TaskViewModel @Inject constructor(
-    private val repository: TaskRepository
-) : ViewModel()
+// PRESENTATION LAYER — ViewModel.  
+//  
+// @HiltViewModel marks this VM so Hilt knows it must build it (not Android).  
+// @Inject constructor(...) tells Hilt: "to build me, you need to resolve these params."  
+//  
+// Notice: the VM depends on the INTERFACE `TaskRepository`, not on `TaskRepositoryImpl`.  
+// That's the whole point of DI — this class doesn't know or care which implementation  
+// it gets. Hilt looks at RepositoryModule and supplies TaskRepositoryImpl.  
+@HiltViewModel  
+
+
+class TaskViewModel @Inject constructor(  
+    private val repository: TaskRepository  
+) : ViewModel() {  
+  
+    fun getTasks(): List<String> {  
+        return repository.getTasks()  
+    }  
+}  
+  
+// `hiltViewModel()` is the bridge from Compose → Hilt.  
+// It asks the nearest @AndroidEntryPoint Activity (MainActivity) for a TaskViewModel.  
+// The Activity holds Hilt's component manager → that gives Hilt the ViewModelComponent  
+// → Hilt builds the VM and resolves its `repository` dependency from the graph.
+
+
 ```
 
 ###### **Key Points**
@@ -38,8 +60,15 @@ class TaskViewModel @Inject constructor(
 
 ###### **Example**
 ```kotlin 
-interface TaskRepository {
-    fun getTasks(): List<String>
+package com.milind.composeplayground.domain  
+  
+// DOMAIN LAYER — pure Kotlin contract. No Android, no Hilt, no implementation.  
+// The ViewModel depends on THIS interface, not on a concrete class.  
+// Why: lets you swap the implementation (real API, fake for tests, cached, etc.)  
+// without touching the ViewModel. Classic Dependency Inversion.  
+
+interface TaskRepository {  
+    fun getTasks(): List<String>  
 }
 ```
 
@@ -66,11 +95,24 @@ interface TaskRepository {
 ###### Example
 
 ```kotlin
-class TaskRepositoryImpl @Inject constructor() : TaskRepository {
+package com.milind.composeplayground.data  
+  
+import com.milind.composeplayground.domain.TaskRepository  
+import javax.inject.Inject  
+  
+// DATA LAYER — concrete implementation of the domain contract.  
+// In a real app this is where you'd call Retrofit / Room / DataStore.  
+//  
+// @Inject constructor() tells Hilt: "you are allowed to build me — and here's how."  
+// Since the constructor takes no args, Hilt just calls `TaskRepositoryImpl()` whenever  
+// something asks for one. If this class needed dependencies (e.g. an ApiService),  
+// Hilt would resolve those recursively from the same graph.  
 
-    override fun getTasks(): List<String> {
-        return listOf("Task 1", "Task 2")
-    }
+class TaskRepositoryImpl @Inject constructor() : TaskRepository {  
+  
+    override fun getTasks(): List<String> {  
+        return listOf("Task 1", "Task 2", "Task 3")  
+    }  
 }
 ```
 
@@ -96,14 +138,37 @@ class TaskRepositoryImpl @Inject constructor() : TaskRepository {
 ###### Example 
 
 ```kotlin
-@Module
-@InstallIn(SingletonComponent::class)
-abstract class RepositoryModule {
+package com.milind.composeplayground.di  
+  
+import com.milind.composeplayground.data.TaskRepositoryImpl  
+import com.milind.composeplayground.domain.TaskRepository  
+import dagger.Binds  
+import dagger.Module  
+import dagger.hilt.InstallIn  
+import dagger.hilt.components.SingletonComponent  
+  
+// DI LAYER — wiring rules for Hilt's object graph.  
+//  
+// The ViewModel asks for `TaskRepository` (an interface). Hilt cannot construct  
+// an interface directly — it needs to know WHICH implementation to provide.  
+// This module is that answer.  
+//  
+// @Module          → "I contain DI rules."  
+// @InstallIn(SingletonComponent::class)  
+//                  → "Install these rules into the app-wide (singleton) graph,  
+//                    so the binding lives as long as the Application."  
+//                    Other scopes exist: ActivityComponent, ViewModelComponent, etc.  
+@Module  
+@InstallIn(SingletonComponent::class)  
 
-    @Binds
-    abstract fun bindRepo(
-        impl: TaskRepositoryImpl
-    ): TaskRepository
+abstract class RepositoryModule {  
+  
+    // @Binds is the lightweight way to say:  
+    //   "When someone needs a TaskRepository, give them a TaskRepositoryImpl."    //    // The class is `abstract` and the method is `abstract` because @Binds doesn't    // run — Hilt reads it as metadata at compile time and generates the wiring code.    //    // Alternative: @Provides (a normal function that returns an instance). Use @Provides    // when you can't just hand over a constructor-injected class — e.g. building a    // Retrofit instance, or wrapping a third-party class you can't annotate.    @Binds  
+    
+    abstract fun bindTaskRepository(  
+        impl: TaskRepositoryImpl  
+    ): TaskRepository  
 }
 ```
 
