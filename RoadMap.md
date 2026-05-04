@@ -63,7 +63,7 @@
 ## Theory
 - [x] What is DI
 - [x] Injection (constructor injection)
-- [ ] @Provides vs @Binds (side-by-side comparison)
+- [x] @Provides vs @Binds (side-by-side comparison)
 - [ ] Dependency Inversion (the principle, not just DI)
 - [ ] Scopes (Singleton, ViewModel, Activity, Fragment)
 
@@ -81,7 +81,7 @@
 
 ### Third-party
 - [x] Provide Retrofit / OkHttp (concept covered with FakeApiService via `@Provides`)
-- [ ] Use qualifiers (`@Named`, `@Qualifier`)
+- [x] Use qualifiers (`@Named`, `@Qualifier`)
 
 ### Build
 - [ ] Refactor Task Manager with Hilt
