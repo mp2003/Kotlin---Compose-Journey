@@ -84,7 +84,7 @@
 - [x] Use qualifiers (`@Named`, `@Qualifier`)
 
 ### Build
-- [ ] Refactor Task Manager with Hilt
+- [x] Refactor Task Manager with Hilt
 
 **Notes written:** DI - Overview, Injection - Constructor Injection, Hilt - DI Library, Hilt - Architecture Layers, Hilt - Runtime Flow, Hilt - Third-party with @Provides
 
