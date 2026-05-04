@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RoadMap.md",
-                "mode": "source",
+                "file": "DI/Hilt - Third-party with @Provides.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RoadMap"
+              "title": "Hilt - Third-party with @Provides"
             }
           }
         ]
@@ -218,17 +218,17 @@
   },
   "active": "45fef640c8366dae",
   "lastOpenFiles": [
+    "DI/Hilt - DI Library.md",
+    "DI/Injection - Constructor Injection.md",
+    "DI/Hilt - Runtime Flow.md",
     "DI/Hilt - Third-party with @Provides.md",
+    "DI/DI - Overview.md",
     "RoadMap.md",
     "DI/Hilt - Architecture Layers.md",
     "MVI Architecture/MVI - Overview.md",
     "MVI Architecture/State - UI Data.md",
     "MVI Architecture/onIntent - Entry Point.md",
-    "DI/Hilt - DI Library.md",
-    "DI/Hilt - Runtime Flow.md",
-    "DI/DI - Overview.md",
     "CLAUDE.md",
-    "DI/Injection - Constructor Injection.md",
     "MVI Architecture/Intent - User Actions.md",
     "MVI Architecture/Task Manager Screen - Exercise.md",
     "note Format.md",
