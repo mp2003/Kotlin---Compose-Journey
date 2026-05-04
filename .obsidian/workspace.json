@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/Injection - Constructor Injection.md",
+                "file": "DI/Hilt - Third-party with @Provides.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Injection - Constructor Injection"
+              "title": "Hilt - Third-party with @Provides"
             }
           }
         ]
@@ -216,13 +216,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "45fef640c8366dae",
+  "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
+    "DI/Injection - Constructor Injection.md",
+    "DI/Hilt - DI Library.md",
     "RoadMap.md",
     "DI/Hilt - Third-party with @Provides.md",
     "DI/Hilt - Architecture Layers.md",
-    "DI/Hilt - DI Library.md",
-    "DI/Injection - Constructor Injection.md",
     "DI/Hilt - Runtime Flow.md",
     "DI/DI - Overview.md",
     "MVI Architecture/MVI - Overview.md",
