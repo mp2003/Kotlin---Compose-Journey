@@ -26,10 +26,9 @@ up: "[[Hilt - DI Library]]"
 //  
 // Notice: the VM depends on the INTERFACE `TaskRepository`, not on `TaskRepositoryImpl`.  
 // That's the whole point of DI — this class doesn't know or care which implementation  
-// it gets. Hilt looks at RepositoryModule and supplies TaskRepositoryImpl.  
+// it gets. Hilt looks at RepositoryModule and supplies TaskRepositoryImpl.
+  
 @HiltViewModel  
-
-
 class TaskViewModel @Inject constructor(  
     private val repository: TaskRepository  
 ) : ViewModel() {  
