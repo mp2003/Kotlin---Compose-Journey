@@ -176,3 +176,7 @@ fun TaskScreen(
 
 [[Injection - Constructor Injection]]
 [[Hilt - DI Library]]
+[[Dependency Inversion]]
+[[Qualifiers]]
+[[Named]]
+[[Task Manager - Hilt Refactor]]
