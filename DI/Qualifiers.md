@@ -1,5 +1,5 @@
 ---
-up: "[[Hilt - Overview]]"
+up: "[[DI - Overview]]"
 ---
 ###### Elevator Pitch
 - Qualifiers tell Hilt exactly which dependency to inject when multiple implementations of the same type exist.
