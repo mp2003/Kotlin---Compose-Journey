@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/Hilt - Third-party with @Provides.md",
+                "file": "DI/Injection - Constructor Injection.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hilt - Third-party with @Provides"
+              "title": "Injection - Constructor Injection"
             }
           }
         ]
@@ -218,13 +218,13 @@
   },
   "active": "45fef640c8366dae",
   "lastOpenFiles": [
-    "DI/Hilt - Architecture Layers.md",
+    "RoadMap.md",
     "DI/Hilt - Third-party with @Provides.md",
+    "DI/Hilt - Architecture Layers.md",
     "DI/Hilt - DI Library.md",
     "DI/Injection - Constructor Injection.md",
     "DI/Hilt - Runtime Flow.md",
     "DI/DI - Overview.md",
-    "RoadMap.md",
     "MVI Architecture/MVI - Overview.md",
     "MVI Architecture/State - UI Data.md",
     "MVI Architecture/onIntent - Entry Point.md",
