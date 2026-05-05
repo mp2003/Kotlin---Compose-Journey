@@ -39,18 +39,14 @@
             "id": "c01145e17ee29a82",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DI/Named.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Named"
+              "title": "New tab"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -245,8 +241,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7fd7b03e13138161",
+  "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
+    "RoadMap.md",
+    "Untitled.md",
     "DI/11 - Task Manager - Hilt Refactor.md",
     "DI/09 - Named.md",
     "DI/02 - Dependency Inversion.md",
@@ -255,7 +253,6 @@
     "AGENTS.md",
     "Keywords/00 - Kotlin Keywords.md",
     "Keywords",
-    "RoadMap.md",
     "Networking",
     "DI/Hilt - Scopes.md",
     "MVI Architecture/08 - Task Manager - Full Code.md",
@@ -274,7 +271,6 @@
     "DI/05 - Hilt - Runtime Flow.md",
     "DI/04 - Hilt - Architecture Layers.md",
     "DI/03 - Hilt - DI Library.md",
-    "DI/Hilt - Provides vs Binds.md",
     "Untitled.canvas",
     "Untitled.base",
     "DI",
