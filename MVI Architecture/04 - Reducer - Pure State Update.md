@@ -1,5 +1,5 @@
 ---
-up: "[[MVI - Overview]]"
+up: "[[00 - MVI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -125,6 +125,6 @@ fun onIntent(intent: UiIntent) {
 ---
 
 ###### Related
-- [[MVI - Overview]]
-- [[State - UI Data]]
-- [[onIntent - Entry Point]]
+- [[00 - MVI - Overview]]
+- [[01 - State - UI Data]]
+- [[03 - onIntent - Entry Point]]

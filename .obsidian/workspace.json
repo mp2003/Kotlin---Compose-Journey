@@ -22,45 +22,13 @@
             }
           },
           {
-            "id": "a57e76bd3c71a802",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DI/Task Manager - Hilt Refactor.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Task Manager - Hilt Refactor"
-            }
-          },
-          {
-            "id": "0b187c412a1752e6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DI/Hilt - Scopes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Hilt - Scopes"
-            }
-          },
-          {
             "id": "7fd7b03e13138161",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DI/Hilt - Third-party with @Provides.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Hilt - Third-party with @Provides"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -78,7 +46,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +92,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTimeReverse",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -273,35 +241,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0b187c412a1752e6",
+  "active": "7fd7b03e13138161",
   "lastOpenFiles": [
-    "DI/Hilt - Provides vs Binds.md",
-    "DI/Hilt - Scopes.md",
     "RoadMap.md",
+    "Networking",
+    "DI/Hilt - Scopes.md",
+    "MVI Architecture/08 - Task Manager - Full Code.md",
+    "MVI Architecture/07 - Task Manager Screen - Exercise.md",
+    "MVI Architecture/06 - ViewModel - The Brain.md",
+    "MVI Architecture/05 - Effect - One-time Events.md",
+    "MVI Architecture/04 - Reducer - Pure State Update.md",
+    "MVI Architecture/03 - onIntent - Entry Point.md",
+    "MVI Architecture/02 - Intent - User Actions.md",
+    "MVI Architecture/01 - State - UI Data.md",
+    "MVI Architecture/00 - MVI - Overview.md",
+    "DI/11 - Task Manager - Hilt Refactor.md",
+    "DI/10 - Hilt - Scopes.md",
+    "DI/09 - Named.md",
+    "DI/08 - Qualifiers.md",
+    "DI/07 - Hilt - Third-party with @Provides.md",
+    "DI/06 - Hilt - Provides vs Binds.md",
+    "DI/05 - Hilt - Runtime Flow.md",
+    "DI/04 - Hilt - Architecture Layers.md",
+    "DI/03 - Hilt - DI Library.md",
+    "DI/02 - Dependency Inversion.md",
+    "DI/01 - Injection - Constructor Injection.md",
+    "DI/00 - DI - Overview.md",
+    "DI/Hilt - Provides vs Binds.md",
     "DI/Named.md",
-    "DI/Qualifiers.md",
-    "DI/Hilt - Third-party with @Provides.md",
-    "DI/Hilt - Architecture Layers.md",
-    "DI/Task Manager - Hilt Refactor.md",
-    "DI/DI - Overview.md",
-    "DI/Refactor Task Manager with Hilt (Coding).md",
-    "DI/Hilt - DI Library.md",
-    "note Format.md",
-    "DI/Dependency Inversion.md",
-    "MVI Architecture/Task Manager Screen - Exercise.md",
-    "DI/Injection - Constructor Injection.md",
-    "DI/Hilt - Runtime Flow.md",
-    "MVI Architecture/MVI - Overview.md",
-    "MVI Architecture/State - UI Data.md",
-    "MVI Architecture/onIntent - Entry Point.md",
-    "CLAUDE.md",
-    "MVI Architecture/Intent - User Actions.md",
     "Untitled.canvas",
-    "Related Note 2.md",
-    "MVI Architecture/Effect - One-time Events.md",
-    "MVI Architecture/Task Manager - Full Code.md",
-    "DI/Dependency Injection with Hilt — Architecture & Flow Layers.md",
-    "DI/Coding - Third-party DI (@Provides).md",
     "Untitled.base",
     "DI",
     "MVI Architecture",

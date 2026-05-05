@@ -1,5 +1,5 @@
 ---
-up: "[[MVI - Overview]]"
+up: "[[00 - MVI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -110,5 +110,5 @@ _state.value.items.add("New Item")
 ---
 
 ###### Related
-- [[MVI - Overview]]
-- [[Reducer - Pure State Update]]
+- [[00 - MVI - Overview]]
+- [[04 - Reducer - Pure State Update]]

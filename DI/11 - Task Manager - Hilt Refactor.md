@@ -1,5 +1,5 @@
 ---
-up: "[[DI - Overview]]"
+up: "[[00 - DI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -42,7 +42,7 @@ up: "[[DI - Overview]]"
 - `@Module + @Binds` -> "interface -> implementation" rule
 - `@Module + @Provides` -> "build this object yourself" rule (for third-party)
 - `@Qualifier` -> tag used to pick between same-type implementations
-- Link: [[DI - Overview]], [[Hilt - DI Library]]
+- Link: [[00 - DI - Overview]], [[03 - Hilt - DI Library]]
 
 ---
 
@@ -488,6 +488,6 @@ fun SearchTaskScreen(
 ---
 
 ###### Related
-- [[DI - Overview]]
-- [[Hilt - DI Library]]
-- [[Qualifiers]]
+- [[00 - DI - Overview]]
+- [[03 - Hilt - DI Library]]
+- [[08 - Qualifiers]]

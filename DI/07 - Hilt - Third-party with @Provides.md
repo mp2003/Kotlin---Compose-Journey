@@ -1,5 +1,5 @@
 ---
-up: "[[Hilt - DI Library]]"
+up: "[[03 - Hilt - DI Library]]"
 ---
  what is 
 ###### Elevator Pitch
@@ -44,7 +44,7 @@ up: "[[Hilt - DI Library]]"
     - Own class -> `@Inject constructor`
     - Own interface + implementation -> `@Binds`
     - Foreign class -> `@Provides`
-- Link: [[Hilt - DI Library]], [[DI - Overview]], [[Injection - Constructor Injection]]
+- Link: [[03 - Hilt - DI Library]], [[00 - DI - Overview]], [[01 - Injection - Constructor Injection]]
 
 ---
 
@@ -212,4 +212,4 @@ object NetworkModule {
 ---
 
 ###### Related
-- [[Hilt - DI Library]]
+- [[03 - Hilt - DI Library]]

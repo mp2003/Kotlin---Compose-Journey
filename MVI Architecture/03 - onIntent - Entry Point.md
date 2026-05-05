@@ -1,5 +1,5 @@
 ---
-up: "[[MVI - Overview]]"
+up: "[[00 - MVI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -118,6 +118,6 @@ private fun deleteItem(item: String) {
 ---
 
 ###### Related
-- [[MVI - Overview]]
-- [[Intent - User Actions]]
-- [[Reducer - Pure State Update]]
+- [[00 - MVI - Overview]]
+- [[02 - Intent - User Actions]]
+- [[04 - Reducer - Pure State Update]]

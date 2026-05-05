@@ -1,5 +1,5 @@
 ---
-up: "[[DI - Overview]]"
+up: "[[00 - DI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -41,7 +41,7 @@ up: "[[DI - Overview]]"
 - Scope -> annotation that says "live as long as THIS component"
 - @InstallIn(X::class) -> "install this module into component X"
 - Scope on @Provides/@Binds -> "cache the result inside that component"
-- Link: [[Hilt - DI Library]], [[Hilt - Architecture Layers]]
+- Link: [[03 - Hilt - DI Library]], [[04 - Hilt - Architecture Layers]]
 
 ---
 
@@ -267,6 +267,6 @@ class SearchTaskViewModel @Inject constructor(
 ---
 
 ###### Related
-- [[DI - Overview]]
-- [[Hilt - DI Library]]
-- [[Hilt - Architecture Layers]]
+- [[00 - DI - Overview]]
+- [[03 - Hilt - DI Library]]
+- [[04 - Hilt - Architecture Layers]]

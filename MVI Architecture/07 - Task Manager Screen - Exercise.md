@@ -1,5 +1,5 @@
 ---
-up: "[[MVI - Overview]]"
+up: "[[00 - MVI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -182,5 +182,5 @@ private fun deleteTask(task: String) {
 ---
 
 ###### Related
-- [[MVI - Overview]]
-- [[Task Manager - Full Code]]
+- [[00 - MVI - Overview]]
+- [[08 - Task Manager - Full Code]]

@@ -1,8 +1,8 @@
 ---
-up: "[[Hilt - DI Library]]"
+up: "[[03 - Hilt - DI Library]]"
 ---
 
-### [[Hilt - Architecture Layers]]
+### [[04 - Hilt - Architecture Layers]]
 ```
 
 PRESENTATION   → HiltTaskScreen → TaskViewModel  
@@ -108,4 +108,4 @@ Hilt always answers 3 questions:
 
 - Hilt manages object creation, wiring, and lifecycle automatically.
 
-[[DI - Overview]]
+[[00 - DI - Overview]]

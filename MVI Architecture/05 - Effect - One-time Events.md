@@ -1,5 +1,5 @@
 ---
-up: "[[MVI - Overview]]"
+up: "[[00 - MVI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -123,5 +123,5 @@ LaunchedEffect(Unit) {
 ---
 
 ###### Related
-- [[MVI - Overview]]
-- [[ViewModel - The Brain]]
+- [[00 - MVI - Overview]]
+- [[06 - ViewModel - The Brain]]

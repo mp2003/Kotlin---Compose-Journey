@@ -1,5 +1,5 @@
 ---
-up: "[[DI - Overview]]"
+up: "[[00 - DI - Overview]]"
 ---
 ###### Elevator Pitch
 - Custom Qualifiers and @Named both solve the same problem (choosing between multiple dependencies), but custom qualifiers are type-safe while @Named relies on strings.

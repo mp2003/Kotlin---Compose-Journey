@@ -1,5 +1,5 @@
 ---
-up: "[[Hilt - DI Library]]"
+up: "[[03 - Hilt - DI Library]]"
 ---
 ##### **1. Presentation Layer**
 
@@ -247,4 +247,4 @@ Presentation → Domain ← Data
 
 ---
 
-[[Hilt - DI Library]]
+[[03 - Hilt - DI Library]]

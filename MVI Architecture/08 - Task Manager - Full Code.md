@@ -1,5 +1,5 @@
 ---
-up: "[[Task Manager Screen - Exercise]]"
+up: "[[07 - Task Manager Screen - Exercise]]"
 ---
 
 ###### Elevator Pitch
@@ -8,7 +8,7 @@ up: "[[Task Manager Screen - Exercise]]"
 ---
 
 ###### Definition
-- The finished implementation of the screen built step-by-step in [[Task Manager Screen - Exercise]]
+- The finished implementation of the screen built step-by-step in [[07 - Task Manager Screen - Exercise]]
 
 ---
 
@@ -210,9 +210,9 @@ fun TaskScreen(
 ---
 
 ###### Key Rule
-- This file is a reference, not a tutorial — go to [[Task Manager Screen - Exercise]] to learn
+- This file is a reference, not a tutorial — go to [[07 - Task Manager Screen - Exercise]] to learn
 
 ---
 
 ###### Related
-- [[Task Manager Screen - Exercise]]
+- [[07 - Task Manager Screen - Exercise]]

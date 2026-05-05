@@ -1,5 +1,5 @@
 ---
-up: "[[MVI - Overview]]"
+up: "[[00 - MVI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -123,6 +123,6 @@ viewModel.onIntent(UiIntent.Add("Task"))   // OK: goes through Intent
 ---
 
 ###### Related
-- [[MVI - Overview]]
-- [[onIntent - Entry Point]]
-- [[Effect - One-time Events]]
+- [[00 - MVI - Overview]]
+- [[03 - onIntent - Entry Point]]
+- [[05 - Effect - One-time Events]]

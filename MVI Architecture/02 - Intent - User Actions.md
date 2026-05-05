@@ -1,5 +1,5 @@
 ---
-up: "[[MVI - Overview]]"
+up: "[[00 - MVI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -93,5 +93,5 @@ sealed class UiIntent {
 ---
 
 ###### Related
-- [[MVI - Overview]]
-- [[onIntent - Entry Point]]
+- [[00 - MVI - Overview]]
+- [[03 - onIntent - Entry Point]]

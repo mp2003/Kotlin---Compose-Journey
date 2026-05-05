@@ -1,5 +1,5 @@
 ---
-up: "[[DI - Overview]]"
+up: "[[00 - DI - Overview]]"
 ---
 
 ###### Definition

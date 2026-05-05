@@ -1,5 +1,5 @@
 ---
-up: "[[DI - Overview]]"
+up: "[[00 - DI - Overview]]"
 ---
 
 ###### Elevator Pitch
@@ -38,7 +38,7 @@ up: "[[DI - Overview]]"
 - @Provides -> normal function, real body, returns an object
 - @Binds requires `abstract class` module
 - @Provides usually goes in an `object` module
-- Link: [[Hilt - DI Library]], [[Hilt - Third-party with @Provides]]
+- Link: [[03 - Hilt - DI Library]], [[07 - Hilt - Third-party with @Provides]]
 
 ---
 
@@ -232,6 +232,6 @@ Does the impl have @Inject constructor + you just want interface -> impl?
 ---
 
 ###### Related
-- [[DI - Overview]]
-- [[Hilt - DI Library]]
-- [[Hilt - Third-party with @Provides]]
+- [[00 - DI - Overview]]
+- [[03 - Hilt - DI Library]]
+- [[07 - Hilt - Third-party with @Provides]]
