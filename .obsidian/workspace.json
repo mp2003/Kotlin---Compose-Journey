@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/Qualifiers.md",
+                "file": "RoadMap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Qualifiers"
+              "title": "RoadMap"
             }
           },
           {
@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -249,8 +249,8 @@
             "state": {
               "type": "bc-matrix-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "bc-matrix-view"
+              "icon": "blinds",
+              "title": "Matrix view"
             }
           }
         ],
@@ -273,20 +273,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a57e76bd3c71a802",
+  "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
+    "DI/Named.md",
+    "DI/Qualifiers.md",
+    "DI/Hilt - Third-party with @Provides.md",
+    "DI/Hilt - Architecture Layers.md",
+    "DI/Task Manager - Hilt Refactor.md",
+    "RoadMap.md",
     "DI/DI - Overview.md",
     "DI/Refactor Task Manager with Hilt (Coding).md",
-    "DI/Task Manager - Hilt Refactor.md",
     "DI/Hilt - DI Library.md",
-    "DI/Qualifiers.md",
-    "RoadMap.md",
     "note Format.md",
     "DI/Dependency Inversion.md",
     "MVI Architecture/Task Manager Screen - Exercise.md",
-    "DI/Hilt - Third-party with @Provides.md",
-    "DI/Named.md",
-    "DI/Hilt - Architecture Layers.md",
     "DI/Injection - Constructor Injection.md",
     "DI/Hilt - Runtime Flow.md",
     "MVI Architecture/MVI - Overview.md",

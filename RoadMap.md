@@ -64,8 +64,8 @@
 - [x] What is DI
 - [x] Injection (constructor injection)
 - [x] @Provides vs @Binds (side-by-side comparison)
-- [ ] Dependency Inversion (the principle, not just DI)
-- [ ] Scopes (Singleton, ViewModel, Activity, Fragment)
+- [x] Dependency Inversion (the principle, not just DI)
+- [x] Scopes (Singleton, ViewModel, Activity, Fragment)
 
 ## Coding
 
