@@ -38,6 +38,7 @@ Notes link to each other with Obsidian wiki-link syntax: `[[Note Name]]`. Preser
 - ASCII flowcharts only when there is a flow — inside ` ```text ` blocks
 - All headings use `######` (h6), separated by `---`
 - Define every technical word inline
+- Every note must have a `###### Syntax` section — exact annotations + a minimal working skeleton in code
 
 **Wiki-link rules (keeps Obsidian graph readable):**
 
@@ -74,6 +75,8 @@ Notes link to each other with Obsidian wiki-link syntax: `[[Note Name]]`. Preser
 - Long text creates phobia — keep everything as short bullet points
 - Plain language always — define jargon inline
 - Match existing depth of sibling notes — do not pad
+- **Syntax-first learner** — every note must include a `###### Syntax` section with the exact annotations and method signatures the user would type; theory without syntax is incomplete
+- Learns best by coding — theory should always be paired with working code, not explained in isolation
 
 ## Working in the vault
 

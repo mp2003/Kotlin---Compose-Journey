@@ -25,6 +25,7 @@
 - ASCII flowcharts go inside ```` ```text ```` blocks
 - All headings use `######` (h6), separated by `---`
 - Define every technical word inline in plain language
+- Every note MUST include a Syntax section — the exact annotations and signatures a developer types, with no fluff
 
 **Wiki-link rules (keeps the graph readable):**
 - Each topic folder has ONE hub/overview note (e.g. `MVI - Overview`)
@@ -51,6 +52,7 @@
 - [ ] Definition is one line
 - [ ] Real-World Analogy is present
 - [ ] Every section is bullets, not paragraphs
+- [ ] Syntax section present — exact annotations + signatures
 - [ ] Code has line-by-line comments
 - [ ] Memory Hook present and short
 - [ ] No emojis
@@ -107,6 +109,16 @@ up: "[[Hub Note Name]]"
 - <Step 2>
 - <Step 3>
 - <Step 4>
+
+---
+
+###### Syntax
+- <annotation or keyword> -> <what it does in one line>
+- <annotation or keyword> -> <what it does in one line>
+
+```kotlin
+// Minimal working skeleton — just the required syntax, nothing extra
+```
 
 ---
 
