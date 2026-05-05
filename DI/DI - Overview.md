@@ -180,3 +180,5 @@ fun TaskScreen(
 [[Qualifiers]]
 [[Named]]
 [[Task Manager - Hilt Refactor]]
+[[Hilt - Provides vs Binds]]
+[[Hilt - Scopes]]

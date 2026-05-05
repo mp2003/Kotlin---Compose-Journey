@@ -58,7 +58,7 @@
 
 ---
 
-# WEEK 2 — Dependency Injection (Hilt)  🟡 IN PROGRESS
+# WEEK 2 — Dependency Injection (Hilt)  ✅ COMPLETE
 
 ## Theory
 - [x] What is DI
@@ -86,16 +86,7 @@
 ### Build
 - [x] Refactor Task Manager with Hilt
 
-**Notes written:** DI - Overview, Injection - Constructor Injection, Hilt - DI Library, Hilt - Architecture Layers, Hilt - Runtime Flow, Hilt - Third-party with @Provides
-
-**Still to do (theory):**
-- `Hilt - @Provides vs @Binds` note (side-by-side: when each one applies)
-- `Hilt - Dependency Inversion` note (the SOLID principle, why interfaces matter)
-- `Hilt - Scopes` note (Singleton, ViewModel, Activity, Fragment scopes)
-- `Hilt - Qualifiers` note (`@Named`, custom `@Qualifier`)
-
-**Still to do (build):**
-- Refactor Task Manager screen with Hilt (inject ViewModel + Repository)
+**Notes written:** DI - Overview, Injection - Constructor Injection, Hilt - DI Library, Hilt - Architecture Layers, Hilt - Runtime Flow, Hilt - Third-party with @Provides, Dependency Inversion, Qualifiers, Named, Task Manager - Hilt Refactor, Hilt - Provides vs Binds, Hilt - Scopes
 
 ---
 
