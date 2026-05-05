@@ -39,10 +39,14 @@
             "id": "c01145e17ee29a82",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "RoadMap.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "RoadMap"
             }
           }
         ],
@@ -243,8 +247,8 @@
   },
   "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
-    "RoadMap.md",
     "Untitled.md",
+    "RoadMap.md",
     "DI/11 - Task Manager - Hilt Refactor.md",
     "DI/09 - Named.md",
     "DI/02 - Dependency Inversion.md",
