@@ -109,6 +109,22 @@ _state.value.items.add("New Item")
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `data class` | Creates an immutable class that holds UI data; Kotlin auto-generates equals, copy, etc. |
+| `val` | Declares a read-only property that cannot be reassigned |
+| `List<String>` | An ordered, read-only collection of strings |
+| `emptyList()` | Returns an empty list as the default value |
+| `Boolean` | A true/false flag |
+| `String?` | A nullable string — can hold text or null |
+| `_state.update { }` | Atomically replaces the current StateFlow value using the block's return value |
+| `.copy(...)` | Creates a new data class instance with one or more fields changed |
+| `.add(...)` | Mutates an existing list in place — BAD pattern with StateFlow |
+
+---
+
 ###### Related
 - [[00 - MVI - Overview]]
 - [[04 - Reducer - Pure State Update]]

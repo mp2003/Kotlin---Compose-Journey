@@ -122,6 +122,23 @@ viewModel.onIntent(UiIntent.Add("Task"))   // OK: goes through Intent
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `class TaskViewModel : ViewModel()` | Declares a ViewModel that survives configuration changes |
+| `MutableStateFlow(UiState())` | Creates a private, writable state holder with an initial value |
+| `MutableSharedFlow<UiEffect>()` | Creates a private stream for one-time events with no replay by default |
+| `private val _state` | Keeps the writable state hidden from the UI |
+| `val state = _state` | Exposes the state as read-only to the UI |
+| `fun onIntent(intent: UiIntent)` | The single public function the UI calls to send any user action |
+| `when (intent)` | Routes each Intent subclass to the appropriate private handler |
+| `_state.update { it.copy(...) }` | Atomically replaces state with a new copy that has one field changed |
+| `viewModel.onIntent(UiIntent.Add(...))` | Correct way for UI to send an action through the Intent system |
+| `viewModel.addTask(...)` | BAD — bypasses the Intent, breaks unidirectional flow |
+
+---
+
 ###### Related
 - [[00 - MVI - Overview]]
 - [[03 - onIntent - Entry Point]]

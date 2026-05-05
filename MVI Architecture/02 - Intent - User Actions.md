@@ -92,6 +92,17 @@ sealed class UiIntent {
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `sealed class` | A closed class hierarchy — all subclasses must be declared in the same file |
+| `object` | A singleton subclass of a sealed class — used for actions with no parameters |
+| `data class` | A sealed subclass that carries data fields as constructor parameters |
+| `: UiIntent()` | Inherits from the sealed class, making this subclass part of the sealed hierarchy |
+
+---
+
 ###### Related
 - [[00 - MVI - Overview]]
 - [[03 - onIntent - Entry Point]]

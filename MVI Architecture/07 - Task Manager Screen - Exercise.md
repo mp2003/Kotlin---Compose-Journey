@@ -181,6 +181,27 @@ private fun deleteTask(task: String) {
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `data class TaskState(...)` | Immutable object holding everything the screen needs to draw itself |
+| `sealed class TaskIntent` | Closed set of user actions the ViewModel can receive |
+| `sealed class TaskEffect` | Closed set of one-time UI events the ViewModel can emit |
+| `data class AddTask(val task: String)` | Intent subclass carrying the text of the new task |
+| `data class DeleteTask(val task: String)` | Intent subclass carrying the task to remove |
+| `data class ShowToast(val message: String)` | Effect subclass carrying the toast text |
+| `class TaskViewModel : ViewModel()` | ViewModel that holds state and processes intents |
+| `MutableStateFlow(TaskState())` | Private writable state stream initialized with the default state |
+| `MutableSharedFlow<TaskEffect>()` | Private one-time event stream |
+| `fun onIntent(intent: TaskIntent)` | Single entry point routing all user actions |
+| `when (intent)` | Exhaustive branch that dispatches each intent to its handler |
+| `_state.update { it.copy(...) }` | Atomically replaces the state with a field-changed copy |
+| `viewModelScope.launch { }` | Starts a coroutine scoped to the ViewModel to emit effects |
+| `_effect.emit(...)` | Sends one event through the SharedFlow |
+
+---
+
 ###### Related
 - [[00 - MVI - Overview]]
 - [[08 - Task Manager - Full Code]]

@@ -214,5 +214,36 @@ fun TaskScreen(
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `import androidx.lifecycle.ViewModel` | Brings in the ViewModel base class |
+| `import androidx.lifecycle.viewModelScope` | Brings in the coroutine scope tied to the ViewModel's lifecycle |
+| `import kotlinx.coroutines.flow.MutableStateFlow` | Brings in the writable state stream |
+| `import kotlinx.coroutines.flow.MutableSharedFlow` | Brings in the writable one-time event stream |
+| `import kotlinx.coroutines.flow.update` | Brings in the atomic update extension function for StateFlow |
+| `import kotlinx.coroutines.launch` | Brings in the coroutine launcher |
+| `data class TaskState(...)` | Immutable snapshot of everything the screen currently shows |
+| `sealed class TaskIntent` | Closed hierarchy of all possible user actions |
+| `sealed class TaskEffect` | Closed hierarchy of all one-time UI events |
+| `class TaskViewModel : ViewModel()` | Holds state, processes intents, and emits effects |
+| `MutableStateFlow(TaskState())` | Private state holder initialized with the default state |
+| `MutableSharedFlow<TaskEffect>()` | Private event holder with no replay |
+| `_state.update { it.copy(...) }` | Atomically swaps the state to a new copy with changed fields |
+| `viewModelScope.launch { }` | Starts a coroutine that lives as long as the ViewModel |
+| `_effect.emit(...)` | Sends one event to all current collectors of the SharedFlow |
+| `@Composable` | Marks a function as a Compose UI component |
+| `viewModel()` | Obtains or creates the ViewModel for this composable |
+| `collectAsState()` | Converts a StateFlow into a Compose State so the UI recomposes on changes |
+| `LocalContext.current` | Provides the Android Context inside a composable |
+| `LaunchedEffect(Unit)` | Starts a side-effect coroutine in Compose, runs once on first composition |
+| `viewModel.effect.collect { }` | Collects one-time events from the SharedFlow inside the LaunchedEffect |
+| `remember { mutableStateOf("") }` | Stores local composable state that survives recomposition |
+| `LazyColumn` | A vertically scrolling list that only composes visible items |
+| `items(state.tasks)` | Iterates over the task list and creates one composable per item |
+
+---
+
 ###### Related
 - [[07 - Task Manager Screen - Exercise]]

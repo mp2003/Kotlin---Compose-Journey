@@ -211,5 +211,23 @@ object NetworkModule {
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `interface ApiService` | Contract that any API worker must fulfill |
+| `fun getTasks(): List<String>` | The one method the contract requires |
+| `class FakeApiService @Inject constructor()` | Fake impl Hilt can build for free using its empty constructor |
+| `override fun getTasks(): List<String>` | Provides hardcoded data as a stand-in for a real network call |
+| `class TaskRepositoryImpl @Inject constructor(private val api: ApiService)` | Repository that declares it needs an ApiService; Hilt injects it |
+| `@Module` | Container of Hilt recipe functions |
+| `@InstallIn(SingletonComponent::class)` | Installs the module's rules into the app-wide component |
+| `object NetworkModule` | Singleton object holding the @Provides functions |
+| `@Provides` | Marks a function that Hilt runs to build and return an object |
+| `fun provideApiService(): ApiService` | Hilt calls this when anything asks for an ApiService |
+| `return FakeApiService()` | Manually constructs and returns the implementation |
+
+---
+
 ###### Related
 - [[03 - Hilt - DI Library]]

@@ -117,6 +117,19 @@ private fun deleteItem(item: String) {
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `fun onIntent(intent: UiIntent)` | The single public function that receives all user actions from the UI |
+| `when (intent)` | Kotlin's exhaustive branching — routes each Intent subclass to its handler |
+| `is UiIntent.Add` | Smart-casts the intent to the Add subtype inside that branch |
+| `private fun` | Marks a helper function as internal to the class — not callable from outside |
+| `_state.update { }` | Atomically replaces StateFlow's current value with the block's return value |
+| `.copy(...)` | Creates a new state object with one field changed, leaving the rest intact |
+
+---
+
 ###### Related
 - [[00 - MVI - Overview]]
 - [[02 - Intent - User Actions]]

@@ -122,6 +122,22 @@ LaunchedEffect(Unit) {
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `sealed class` | A closed hierarchy — all one-time event types are declared here |
+| `data class ShowToast(val message: String)` | An Effect subclass that carries the toast text |
+| `data class Navigate(val route: String)` | An Effect subclass that carries the navigation destination |
+| `viewModelScope.launch { }` | Opens a coroutine tied to the ViewModel's lifecycle to emit events safely |
+| `_effect.emit(...)` | Sends one event to the SharedFlow; all active collectors receive it once |
+| `LaunchedEffect(Unit)` | Starts a coroutine in Compose that lives as long as the composable is in scope |
+| `viewModel.effect.collect { }` | Listens for events from the SharedFlow and runs the block for each one |
+| `when (effect)` | Routes each Effect subclass to the correct UI action |
+| `is UiEffect.ShowToast` | Smart-casts the effect so `effect.message` is accessible |
+
+---
+
 ###### Related
 - [[00 - MVI - Overview]]
 - [[06 - ViewModel - The Brain]]

@@ -213,6 +213,23 @@ class TaskViewModel @Inject constructor(
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `interface TaskRepository` | Defines the abstraction (contract) that high-level code depends on |
+| `fun getTasks(): List<String>` | Declares behavior without providing implementation |
+| `@Inject constructor(private val api: ApiService)` | Tells Hilt to inject an ApiService when building this class |
+| `override fun getTasks()` | Provides the concrete implementation of the interface method |
+| `@HiltViewModel` | Marks the ViewModel so Hilt knows it must build it |
+| `@Inject constructor(private val repository: TaskRepository)` | Injects the interface type — Hilt resolves which impl to use |
+| `@Module` | Container of Hilt binding rules |
+| `@InstallIn(SingletonComponent::class)` | Installs the module's rules into the app-wide component |
+| `@Binds` | Metadata rule: "when asked for TaskRepository, give TaskRepositoryImpl" |
+| `abstract fun bindRepo(impl: TaskRepositoryImpl): TaskRepository` | Wires the interface to the implementation at compile time |
+
+---
+
 ###### **Related**
 
 - [[Hilt - DI]]

@@ -230,6 +230,24 @@ class QualifierRepo @Inject constructor(
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `@Named("fake")` | Built-in string-based qualifier; tags this provider with the key "fake" |
+| `@Provides` | Marks a function that Hilt calls to build and return an object |
+| `fun provideFakeApi(): ApiService` | Hilt calls this when a "fake"-named ApiService is requested |
+| `class Repo @Inject constructor(@Named("fake") private val api: ApiService)` | Requests the "fake"-tagged ApiService at the injection point |
+| `@Qualifier` | Meta-annotation marking a custom annotation as a Hilt qualifier |
+| `@Retention(AnnotationRetention.BINARY)` | Keeps the annotation in bytecode so Hilt can read it at compile time |
+| `annotation class FakeApi` | Type-safe custom qualifier — safer alternative to @Named |
+| `@FakeApi` | Applies the custom qualifier at the provider and injection point |
+| `class FakeApiService @Inject constructor()` | Fake implementation Hilt can build using its empty constructor |
+| `@Module` | Container of Hilt binding and provide rules |
+| `@InstallIn(SingletonComponent::class)` | Installs the module's rules into the app-wide component |
+
+---
+
 ###### **Related**
 
 - [[Hilt - Qualifiers]]

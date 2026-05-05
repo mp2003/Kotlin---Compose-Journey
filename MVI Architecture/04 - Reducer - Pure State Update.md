@@ -124,6 +124,19 @@ fun onIntent(intent: UiIntent) {
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `fun reducer(state: UiState, intent: UiIntent): UiState` | A pure function signature — takes current state and an intent, returns new state |
+| `return when (intent)` | Routes each Intent subclass to its own state-transformation expression |
+| `is UiIntent.Add` | Smart-casts intent to the Add subtype so its fields are accessible |
+| `state.copy(...)` | Creates a brand-new state object with one field changed |
+| `else -> state` | Fallback branch — returns the current state unchanged for unhandled intents |
+| `_state.update { current -> }` | Atomically applies the reducer to the current StateFlow value |
+
+---
+
 ###### Related
 - [[00 - MVI - Overview]]
 - [[01 - State - UI Data]]

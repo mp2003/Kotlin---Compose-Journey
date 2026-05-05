@@ -108,4 +108,21 @@ Hilt always answers 3 questions:
 
 - Hilt manages object creation, wiring, and lifecycle automatically.
 
+---
+
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `@HiltAndroidApp` | Initializes Hilt's root container when the Application starts |
+| `@AndroidEntryPoint` | Attaches a Hilt component to the Activity so it can receive injections |
+| `hiltViewModel()` | Compose call that triggers Hilt to create and inject the ViewModel |
+| `@HiltViewModel` | Signals Hilt to manage this ViewModel's creation and injection |
+| `@Inject constructor(repository: TaskRepository)` | Declares what Hilt must inject when building the ViewModel |
+| `@Binds` | Rule read at compile time — "give TaskRepositoryImpl when TaskRepository is requested" |
+| `@Provides` | Runtime function Hilt calls to build an object it cannot construct by itself |
+| `@InstallIn` | Declares which component's lifetime the module's rules belong to |
+
+---
+
 [[00 - DI - Overview]]

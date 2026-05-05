@@ -241,7 +241,7 @@
           "prevs"
         ],
         "lock_view": false,
-        "lock_path": "Keywords/00 - Kotlin Keywords.md"
+        "lock_path": "DI/01 - Injection - Constructor Injection.md"
       },
       "tree": {
         "collapse": false,

@@ -89,4 +89,19 @@ abstract class RepositoryModule {
 
 - Class should declare dependencies, not create them
 
+---
+
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `class TaskViewModel : ViewModel()` | Declares a ViewModel that survives configuration changes |
+| `private val repository = TaskRepositoryImpl()` | BAD — creates the dependency manually inside the class |
+| `@Inject constructor(...)` | Tells Hilt to inject the listed parameters instead of the class creating them itself |
+| `private val repository: TaskRepository` | Declares dependency on the interface, not the concrete implementation |
+| `@Module` | Marks a class/object as a container of Hilt binding rules |
+| `@InstallIn(SingletonComponent::class)` | Installs the module's rules into the app-wide component |
+| `abstract class RepositoryModule` | Abstract class required when using @Binds |
+| `@Binds` | Tells Hilt "when asked for the return type, provide the parameter type" |
+| `abstract fun bindRepo(impl: TaskRepositoryImpl): TaskRepository` | Wires the interface to its implementation — no runtime function call |
 

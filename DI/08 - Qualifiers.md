@@ -215,6 +215,24 @@ class Repo @Inject constructor(
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `@Qualifier` | Meta-annotation that marks your custom annotation as a Hilt qualifier |
+| `@Retention(AnnotationRetention.BINARY)` | Keeps the annotation in the compiled bytecode (required for Hilt to read it) |
+| `annotation class FakeApi` | Defines a custom label used to tag a specific dependency |
+| `@FakeApi` | Applies the qualifier — tells Hilt "this is the FakeApi variant" |
+| `@Provides` | Marks a function that Hilt runs to build and return an object |
+| `fun provideFakeApi(): ApiService` | Hilt calls this when an @FakeApi-tagged ApiService is requested |
+| `return FakeApiService()` | Manually constructs the implementation |
+| `class Repo @Inject constructor(@FakeApi private val api: ApiService)` | Requests the specific @FakeApi variant at the injection point |
+| `@Module` | Container of Hilt binding and provide rules |
+| `@InstallIn(SingletonComponent::class)` | Installs the module's rules into the app-wide component |
+| `class FakeApiService @Inject constructor()` | Fake implementation Hilt can build using its empty constructor |
+
+---
+
 ###### **Related**
 
 - [[Hilt - DI]]

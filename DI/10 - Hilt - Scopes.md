@@ -266,6 +266,30 @@ class SearchTaskViewModel @Inject constructor(
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `@Singleton` | Scope — tells Hilt to build this object once and reuse it for the whole app |
+| `@Module` | Container of Hilt binding and provide rules |
+| `@InstallIn(SingletonComponent::class)` | Installs the module into the app-wide component |
+| `@Provides` | Marks a function Hilt calls to build and return an object |
+| `fun provideOkHttp(): OkHttpClient` | Builds an OkHttpClient; @Singleton ensures only one is created |
+| `OkHttpClient.Builder().build()` | Manually constructs the OkHttpClient |
+| `@ViewModelScoped` | Scope — one instance per ViewModel; destroyed when the ViewModel is destroyed |
+| `@InstallIn(ViewModelComponent::class)` | Installs the module into the ViewModel component |
+| `fun provideSearchHistory(): SearchHistory` | Builds a SearchHistory scoped to one ViewModel |
+| `@HiltViewModel` | Marks the ViewModel so Hilt (not Android) creates it |
+| `@Inject constructor(private val history: SearchHistory)` | Injects the @ViewModelScoped SearchHistory into this ViewModel |
+| `fun provideRetrofit(client: OkHttpClient): Retrofit` | @Provides function that receives OkHttpClient as a Hilt-injected parameter |
+| `fun provideApiService(retrofit: Retrofit): ApiService` | Uses Retrofit to generate the ApiService implementation |
+| `retrofit.create(ApiService::class.java)` | Retrofit generates the interface implementation at runtime |
+| `@Binds @Singleton` | Wires an interface to its impl AND caches the result app-wide |
+| `abstract fun bindRepo(impl: TaskRepositoryImpl): TaskRepository` | Compile-time binding declaration |
+| `private val items = mutableListOf<String>()` | Local mutable state inside SearchHistory |
+
+---
+
 ###### Related
 - [[00 - DI - Overview]]
 - [[03 - Hilt - DI Library]]

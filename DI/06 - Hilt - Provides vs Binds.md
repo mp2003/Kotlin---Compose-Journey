@@ -231,6 +231,27 @@ Does the impl have @Inject constructor + you just want interface -> impl?
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `@Module` | Marks a class or object as a container of Hilt dependency rules |
+| `@InstallIn(SingletonComponent::class)` | Installs the module's rules into the app-wide component |
+| `abstract class RepositoryModule` | Required abstract class when using @Binds (no function bodies) |
+| `@Binds` | Compile-time metadata rule — maps an interface to its implementation |
+| `abstract fun bindTaskRepository(impl: TaskRepositoryImpl): TaskRepository` | The binding declaration; parameter must have @Inject constructor |
+| `object NetworkModule` | Singleton object used to hold @Provides functions |
+| `@Provides` | Marks a function that Hilt calls at runtime to build and return an object |
+| `@Singleton` | Scope annotation — tells Hilt to create this object once and reuse it |
+| `fun provideOkHttp(): OkHttpClient` | Hilt calls this whenever an OkHttpClient is needed |
+| `OkHttpClient.Builder().connectTimeout(...).build()` | Manual construction of a third-party object inside @Provides |
+| `fun provideRetrofit(client: OkHttpClient): Retrofit` | @Provides function that takes another dep as a parameter |
+| `fun provideApiService(retrofit: Retrofit): ApiService` | Builds an ApiService from the Retrofit instance |
+| `retrofit.create(ApiService::class.java)` | Retrofit generates the ApiService implementation at runtime |
+| `@Inject constructor(private val api: ApiService)` | Tells Hilt to inject an ApiService when building TaskRepositoryImpl |
+
+---
+
 ###### Related
 - [[00 - DI - Overview]]
 - [[03 - Hilt - DI Library]]

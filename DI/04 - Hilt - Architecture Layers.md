@@ -247,4 +247,23 @@ Presentation → Domain ← Data
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `@HiltViewModel` | Marks the ViewModel so Hilt (not Android) builds it |
+| `@Inject constructor(private val repository: TaskRepository)` | Declares that Hilt must supply a TaskRepository when creating this ViewModel |
+| `fun getTasks(): List<String>` | Delegates to the injected repository — no manual creation |
+| `hiltViewModel()` | Compose bridge that asks Hilt to provide the ViewModel |
+| `interface TaskRepository` | Pure Kotlin contract; no Android or Hilt imports |
+| `class TaskRepositoryImpl @Inject constructor()` | Concrete implementation Hilt can build via its constructor |
+| `override fun getTasks(): List<String>` | Provides the actual data (hardcoded list here) |
+| `@Module` | Container of Hilt wiring rules |
+| `@InstallIn(SingletonComponent::class)` | Installs the module's rules into the app-wide component |
+| `abstract class RepositoryModule` | Required abstract class for @Binds |
+| `@Binds` | Compile-time rule: "when someone needs TaskRepository, give TaskRepositoryImpl" |
+| `abstract fun bindTaskRepository(impl: TaskRepositoryImpl): TaskRepository` | The wiring declaration |
+
+---
+
 [[03 - Hilt - DI Library]]
