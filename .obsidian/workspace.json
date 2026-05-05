@@ -243,6 +243,7 @@
   },
   "active": "7fd7b03e13138161",
   "lastOpenFiles": [
+    "AGENTS.md",
     "Keywords/00 - Kotlin Keywords.md",
     "Keywords",
     "RoadMap.md",
@@ -270,7 +271,6 @@
     "DI/01 - Injection - Constructor Injection.md",
     "DI/00 - DI - Overview.md",
     "DI/Hilt - Provides vs Binds.md",
-    "DI/Named.md",
     "Untitled.canvas",
     "Untitled.base",
     "DI",
