@@ -235,9 +235,6 @@ class TaskViewModel @Inject constructor(
 - [[Hilt - DI]]
 - [[Hilt - @Provides vs @Binds]]
 
-````
----
-
 # 🧠 Final clarity (outside notes)
 
 👉 What you’ve been doing:
@@ -262,12 +259,3 @@ That **is DIP in action**.
 DI = tool
 DIP = design rule
 ```
-
----
-
-# **🚀 You are done with WEEK 2 core**
-
-If you want next:
-
-👉 WEEK 3 (Networking + Retrofit + Real API)  
-👉 Or deeper: Testing with Hilt (this is next real skill)

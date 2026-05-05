@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/01 - Injection - Constructor Injection.md",
+                "file": "DI/02 - Dependency Inversion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - Injection - Constructor Injection"
+              "title": "02 - Dependency Inversion"
             }
           },
           {
@@ -247,6 +247,7 @@
   },
   "active": "7fd7b03e13138161",
   "lastOpenFiles": [
+    "DI/01 - Injection - Constructor Injection.md",
     "DI/00 - DI - Overview.md",
     "AGENTS.md",
     "Keywords/00 - Kotlin Keywords.md",
@@ -273,7 +274,6 @@
     "DI/04 - Hilt - Architecture Layers.md",
     "DI/03 - Hilt - DI Library.md",
     "DI/02 - Dependency Inversion.md",
-    "DI/01 - Injection - Constructor Injection.md",
     "DI/Hilt - Provides vs Binds.md",
     "Untitled.canvas",
     "Untitled.base",

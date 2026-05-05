@@ -487,6 +487,50 @@ fun SearchTaskScreen(
 
 ---
 
+###### Keywords Used
+
+| Keyword | What it does |
+|---------|--------------|
+| `@HiltAndroidApp` | Turns the Application class into Hilt's root dependency container |
+| `class MyApp : Application()` | Custom Application subclass that Hilt requires |
+| `@AndroidEntryPoint` | Opens the Activity to Hilt injections |
+| `class MainActivity : ComponentActivity()` | The Activity serving as Hilt's entry point into the Compose UI |
+| `setContent { }` | Compose entry point inside an Activity |
+| `interface TaskRepository` | Domain abstraction the ViewModel depends on |
+| `fun getTasks(): List<String>` | Fetch all tasks |
+| `fun search(query: String): List<String>` | Search tasks by query string |
+| `interface ApiService` | Remote data contract; multiple implementations exist |
+| `@Qualifier @Retention(AnnotationRetention.BINARY) annotation class FakeApi` | Custom qualifier to tag the fake implementation |
+| `@Qualifier @Retention(AnnotationRetention.BINARY) annotation class RealApi` | Custom qualifier to tag the real implementation |
+| `@Qualifier @Retention(AnnotationRetention.BINARY) annotation class SearchApiResult` | Custom qualifier for the search-specific implementation |
+| `class FakeApiService @Inject constructor()` | Fake impl Hilt can build for free |
+| `class SearchApiService @Inject constructor()` | Search impl Hilt can build for free |
+| `class TaskRepositoryImpl @Inject constructor(@SearchApiResult private val api: ApiService)` | Requests the @SearchApiResult-qualified ApiService |
+| `@Module @InstallIn(SingletonComponent::class) abstract class RepositoryModule` | Module that holds @Binds rules at app scope |
+| `@Binds @Singleton abstract fun bindTaskRepository(impl: TaskRepositoryImpl): TaskRepository` | Wires the interface to impl and scopes it to the whole app |
+| `object NetworkModule` | Holds @Provides functions for the three ApiService variants |
+| `@FakeApi @Singleton @Provides fun provideFakeApi()` | Provides the fake ApiService once for the whole app |
+| `@SearchApiResult @Singleton @Provides fun provideSearchApi()` | Provides the search ApiService once for the whole app |
+| `@HiltViewModel` | Marks SearchTaskViewModel so Hilt builds it |
+| `@Inject constructor(private val repository: TaskRepository)` | Hilt injects the interface; the impl is resolved via @Binds |
+| `MutableStateFlow(SearchTaskState())` | Private writable state stream with an initial value |
+| `MutableSharedFlow<SearchTaskEffect>()` | Private one-time event stream |
+| `_state.asStateFlow()` | Exposes the state as a read-only StateFlow |
+| `_effect.asSharedFlow()` | Exposes the effect stream as a read-only SharedFlow |
+| `fun onIntent(intent: SearchTaskIntent)` | Single entry point for all UI actions |
+| `_state.update { it.copy(...) }` | Atomically replaces state with a field-changed copy |
+| `viewModelScope.launch { }` | Coroutine scope tied to the ViewModel |
+| `_effect.emit(...)` | Sends one event to all active collectors |
+| `hiltViewModel()` | Compose function that asks Hilt to create the ViewModel |
+| `collectAsState()` | Converts StateFlow into a Compose State so the UI recomposes on changes |
+| `LaunchedEffect(Unit)` | Starts a side-effect coroutine in Compose, runs once |
+| `vm.effect.collect { }` | Collects one-time effects from the SharedFlow |
+| `sealed interface SearchTaskIntent` | Closed set of user actions using a sealed interface |
+| `sealed interface SearchTaskEffect` | Closed set of one-time events using a sealed interface |
+| `data class SearchTaskState(...)` | Immutable snapshot of the screen's current UI data |
+
+---
+
 ###### Related
 - [[00 - DI - Overview]]
 - [[03 - Hilt - DI Library]]
