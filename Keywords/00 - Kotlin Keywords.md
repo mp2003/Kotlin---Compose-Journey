@@ -1,7 +1,3 @@
----
-up: "[[00 - Kotlin Keywords]]"
----
-
 ###### Elevator Pitch
 - This is your Kotlin cheat sheet — every keyword you will see in Android code, what it does, and the exact syntax to write it.
 
