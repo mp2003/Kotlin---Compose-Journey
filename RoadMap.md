@@ -90,7 +90,7 @@
 
 ---
 
-# WEEK 3 — Networking (Retrofit + OkHttp)
+# WEEK 3 — Networking (Retrofit + OkHttp)  🟡 IN PROGRESS
 
 ## Theory
 - [ ] REST APIs in Android
@@ -98,24 +98,44 @@
 - [ ] Serialization
 - [ ] Interceptors
 
-## Coding
+## Build — Posts Feed App (phase by phase)
 
-### Retrofit
-- [ ] Create API interface
-- [ ] Use GET / POST / DELETE
-- [ ] Add query params
+### Phase 1 — Basic GET (no repo, no MVI yet)
+- [ ] Add Retrofit + OkHttp dependencies
+- [ ] Create `Post` data class
+- [ ] Create `PostsApiService` interface with GET
+- [ ] Build Retrofit instance manually
+- [ ] Make the call, log the result
 
-### Interceptors
-- [ ] Logging
-- [ ] Auth header
-- [ ] Token refresh
+### Phase 2 — Introduce Repository
+- [ ] Create `PostRepository`
+- [ ] Move API call into repository
+- [ ] ViewModel calls repository
 
-### Error Handling
-- [ ] Create `ApiResult`
-- [ ] Map to UI state
+### Phase 3 — MVI Integration
+- [ ] Create `PostsUiState`
+- [ ] Create `PostsIntent`
+- [ ] Wire ViewModel → StateFlow → UI
 
-### Build
-- [ ] Posts App (API integration)
+### Phase 4 — Error Handling
+- [ ] Create `ApiResult` sealed class
+- [ ] Map Loading / Success / Error to UI state
+
+### Phase 5 — Interceptors
+- [ ] Add logging interceptor
+- [ ] Add auth header interceptor
+- [ ] Understand token refresh (concept only)
+
+## Progress Tracker
+| Phase | Status |
+|---|---|
+| Phase 1 — Basic GET | ⬜ Not started |
+| Phase 2 — Repository | ⬜ Not started |
+| Phase 3 — MVI | ⬜ Not started |
+| Phase 4 — Error Handling | ⬜ Not started |
+| Phase 5 — Interceptors | ⬜ Not started |
+
+**Notes written:** *(none yet)*
 
 ---
 
@@ -253,8 +273,8 @@
 | Week   | Status        |
 | ------ | ------------- |
 | Week 1 | ✅ Complete    |
-| Week 2 | 🟡 In progress |
-| Week 3 | ⬜ Not started |
+| Week 2 | ✅ Complete |
+| Week 3 | 🟡 In progress |
 | Week 4 | ⬜ Not started |
 | Week 5 | ⬜ Not started |
 | Week 6 | ⬜ Not started |
