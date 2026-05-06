@@ -90,13 +90,13 @@
 
 ---
 
-# WEEK 3 — Networking (Retrofit + OkHttp)  🟡 IN PROGRESS
+# WEEK 3 — Networking (Retrofit + OkHttp)  ✅ COMPLETE
 
 ## Theory
 - [x] REST APIs in Android
 - [x] Retrofit vs OkHttp
 - [x] Serialization
-- [ ] Interceptors
+- [x] Interceptors
 
 ## Build — Posts Feed App (phase by phase)
 
@@ -127,13 +127,13 @@
 - [x] Understand token refresh (concept only)
 
 ## Progress Tracker
-| Phase | Status |
-|---|---|
-| Phase 1 — Basic GET | ✅ Complete |
-| Phase 2 — Repository | ✅ Complete |
-| Phase 3 — MVI | ✅ Complete |
+| Phase                    | Status     |
+| ------------------------ | ---------- |
+| Phase 1 — Basic GET      | ✅ Complete |
+| Phase 2 — Repository     | ✅ Complete |
+| Phase 3 — MVI            | ✅ Complete |
 | Phase 4 — Error Handling | ✅ Complete |
-| Phase 5 — Interceptors | ✅ Complete |
+| Phase 5 — Interceptors   | ✅ Complete |
 
 **Notes written:** Phase 1 - Basic GET Call, Phase 2 - Repository, Phase 3 - MVI, Phase 4 - Error Handling, Phase 5 - Interceptors
 
@@ -281,7 +281,7 @@
 | ------ | ------------- |
 | Week 1 | ✅ Complete    |
 | Week 2 | ✅ Complete |
-| Week 3 | 🟡 In progress |
+| Week 3 | ✅ Complete |
 | Week 4 | ⬜ Not started |
 | Week 5 | ⬜ Not started |
 | Week 6 | ⬜ Not started |
@@ -292,12 +292,9 @@
 
 # Current Focus
 
-- Finish Week 2 theory: write 4 missing notes
-    1. `Hilt - @Provides vs @Binds` (side-by-side comparison)
-    2. `Hilt - Dependency Inversion` (the principle behind DI)
-    3. `Hilt - Scopes` (Singleton, ViewModel, Activity, Fragment)
-    4. `Hilt - Qualifiers` (`@Named` and custom `@Qualifier`)
-- Then build: refactor Task Manager screen with Hilt
+- Week 4 — Navigation + Compose UI
+    - Start with NavHost & NavController theory
+    - Build: extend Posts App with navigation
 
 ---
 
