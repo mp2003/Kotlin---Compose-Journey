@@ -100,12 +100,12 @@
 
 ## Build — Posts Feed App (phase by phase)
 
-### Phase 1 — Basic GET (no repo, no MVI yet)
-- [ ] Add Retrofit + OkHttp dependencies
-- [ ] Create `Post` data class
-- [ ] Create `PostsApiService` interface with GET
-- [ ] Build Retrofit instance manually
-- [ ] Make the call, log the result
+### Phase 1 — Basic GET 
+- [x] Add Retrofit + OkHttp dependencies
+- [x] Create `Post` data class
+- [x] Create `PostsApiService` interface with GET
+- [x] Build Retrofit instance manually
+- [x] Make the call, log the result
 
 ### Phase 2 — Introduce Repository
 - [x] Create `PostRepository`
@@ -122,9 +122,9 @@
 - [x] Map Loading / Success / Error to UI state
 
 ### Phase 5 — Interceptors
-- [ ] Add logging interceptor
-- [ ] Add auth header interceptor
-- [ ] Understand token refresh (concept only)
+- [x] Add logging interceptor
+- [x] Add auth header interceptor
+- [x] Understand token refresh (concept only)
 
 ## Progress Tracker
 | Phase | Status |
@@ -133,9 +133,16 @@
 | Phase 2 — Repository | ✅ Complete |
 | Phase 3 — MVI | ✅ Complete |
 | Phase 4 — Error Handling | ✅ Complete |
-| Phase 5 — Interceptors | ⬜ Not started |
+| Phase 5 — Interceptors | ✅ Complete |
 
-**Notes written:** Phase 1 - Basic GET Call, Phase 2 - Repository, Phase 3 - MVI, Phase 4 - Error Handling
+**Notes written:** Phase 1 - Basic GET Call, Phase 2 - Repository, Phase 3 - MVI, Phase 4 - Error Handling, Phase 5 - Interceptors
+
+## Notes
+- Phase 1: learned how REST API calls work in Android using Retrofit, OkHttp, and a simple GET request.
+- Phase 2: moved the network call into `PostRepository` so data access stayed outside the UI layer.
+- Phase 3: connected API data to the screen with MVI using `PostUiState`, `PostIntent`, `PostViewModel`, and `StateFlow`.
+- Phase 4: introduced `ApiResult` so success and error handling became structured instead of raw.
+- Phase 5: added a logging interceptor and an auth header interceptor to understand request flow and headers.
 
 ---
 
