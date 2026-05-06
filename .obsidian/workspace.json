@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/04 - Hilt - Architecture Layers.md",
+                "file": "RoadMap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 - Hilt - Architecture Layers"
+              "title": "RoadMap"
             }
           }
         ],
@@ -245,8 +245,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c01145e17ee29a82",
+  "active": "791c7be8782ce1c5",
   "lastOpenFiles": [
+    "DI/04 - Hilt - Architecture Layers.md",
     "DI/03 - Hilt - DI Library.md",
     "DI/02 - Dependency Inversion.md",
     "RoadMap.md",
@@ -256,7 +257,6 @@
     "MVI Architecture/02 - Intent - User Actions.md",
     "note Format.md",
     "CLAUDE.md",
-    "DI/04 - Hilt - Architecture Layers.md",
     "Networking/01 - Phase 1 - Basic GET Call.md",
     "Networking/00 - Networking - Overview.md",
     "Untitled.md",

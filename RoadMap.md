@@ -93,9 +93,9 @@
 # WEEK 3 — Networking (Retrofit + OkHttp)  🟡 IN PROGRESS
 
 ## Theory
-- [ ] REST APIs in Android
-- [ ] Retrofit vs OkHttp
-- [ ] Serialization
+- [x] REST APIs in Android
+- [x] Retrofit vs OkHttp
+- [x] Serialization
 - [ ] Interceptors
 
 ## Build — Posts Feed App (phase by phase)
@@ -108,18 +108,18 @@
 - [ ] Make the call, log the result
 
 ### Phase 2 — Introduce Repository
-- [ ] Create `PostRepository`
-- [ ] Move API call into repository
-- [ ] ViewModel calls repository
+- [x] Create `PostRepository`
+- [x] Move API call into repository
+- [x] ViewModel calls repository
 
 ### Phase 3 — MVI Integration
-- [ ] Create `PostsUiState`
-- [ ] Create `PostsIntent`
-- [ ] Wire ViewModel → StateFlow → UI
+- [x] Create `PostsUiState`
+- [x] Create `PostsIntent`
+- [x] Wire ViewModel → StateFlow → UI
 
 ### Phase 4 — Error Handling
-- [ ] Create `ApiResult` sealed class
-- [ ] Map Loading / Success / Error to UI state
+- [x] Create `ApiResult` sealed class
+- [x] Map Loading / Success / Error to UI state
 
 ### Phase 5 — Interceptors
 - [ ] Add logging interceptor
@@ -130,12 +130,12 @@
 | Phase | Status |
 |---|---|
 | Phase 1 — Basic GET | ✅ Complete |
-| Phase 2 — Repository | ⬜ Not started |
-| Phase 3 — MVI | ⬜ Not started |
-| Phase 4 — Error Handling | ⬜ Not started |
+| Phase 2 — Repository | ✅ Complete |
+| Phase 3 — MVI | ✅ Complete |
+| Phase 4 — Error Handling | ✅ Complete |
 | Phase 5 — Interceptors | ⬜ Not started |
 
-**Notes written:** Phase 1 - Basic GET Call
+**Notes written:** Phase 1 - Basic GET Call, Phase 2 - Repository, Phase 3 - MVI, Phase 4 - Error Handling
 
 ---
 
