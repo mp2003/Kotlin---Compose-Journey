@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DI/04 - Hilt - Architecture Layers.md",
+                "file": "DI/07 - Hilt - Third-party with @Provides.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 - Hilt - Architecture Layers"
+              "title": "07 - Hilt - Third-party with @Provides"
             }
           }
         ],
@@ -247,9 +247,12 @@
   },
   "active": "c01145e17ee29a82",
   "lastOpenFiles": [
-    "MVI Architecture/01 - State - UI Data.md",
+    "MVI Architecture/00 - MVI - Overview.md",
+    "DI/00 - DI - Overview.md",
+    "DI/05 - Hilt - Runtime Flow.md",
     "MVI Architecture/02 - Intent - User Actions.md",
     "DI/04 - Hilt - Architecture Layers.md",
+    "MVI Architecture/01 - State - UI Data.md",
     "MVI Architecture/04 - Reducer - Pure State Update.md",
     "MVI Architecture/03 - onIntent - Entry Point.md",
     "DI/08 - Qualifiers.md",
@@ -270,9 +273,6 @@
     "MVI Architecture/07 - Task Manager Screen - Exercise.md",
     "MVI Architecture/06 - ViewModel - The Brain.md",
     "Untitled.md",
-    "DI/11 - Task Manager - Hilt Refactor.md",
-    "DI/09 - Named.md",
-    "DI/01 - Injection - Constructor Injection.md",
     "Keywords",
     "Networking",
     "Untitled.canvas",
