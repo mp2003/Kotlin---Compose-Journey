@@ -157,7 +157,7 @@
 ## Coding
 - [x] Setup navigation routes (sealed `ScreenState` route definitions)
 - [x] Pass arguments (typed `navArgument` + `NavType.StringType` / `NavType.IntType`, default values)
-- [ ] Back navigation
+- [x] Back navigation (`popBackStack()` hoisted as `onBack: () -> Unit` — screen decoupled from NavController)
 
 ### UI Patterns
 - [ ] LazyColumn / LazyRow
@@ -171,7 +171,7 @@
 
 **Project:** `NavigationApp` — `NavigationMvi` (NavHost), `ScreenState` sealed routes, `DetailScreen` receiving `name`/`age` args, MVI layer (`MainViewModel`, `MainUiState/Event/Effect`) carried over from Week 1.
 
-**Notes:** built a 2-screen graph (MainScreen → DetailScreen), passed String + Int arguments through the route with `navArgument`, used default & nullable argument config, integrated navigation with the existing MVI screen.
+**Notes:** built a 2-screen graph (MainScreen → DetailScreen), passed String + Int arguments through the route with `navArgument`, used default & nullable argument config, integrated navigation with the existing MVI screen. Added back navigation via hoisted `onBack` lambda (DetailScreen stays decoupled from NavController — preview/test friendly). Added numeric age input: `KeyboardType.Number` keyboard + digit-only validation enforced in the ViewModel reducer (UX hint vs. actual enforcement).
 
 ---
 
@@ -297,8 +297,8 @@
 # Current Focus
 
 - Week 4 — Navigation + Compose UI (in progress)
-    - ✅ Done: NavHost/NavController, route setup, typed argument passing (NavigationApp)
-    - Next: back navigation, nested graphs, bottom navigation
+    - ✅ Done: NavHost/NavController, route setup, typed argument passing, back navigation (NavigationApp)
+    - Next: nested graphs, bottom navigation
     - Then: UI patterns (LazyColumn, Scaffold, Coil) + extend Posts App
 
 ---
