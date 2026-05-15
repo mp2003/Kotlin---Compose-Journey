@@ -172,7 +172,9 @@
 
 **Project:** `NavigationApp` — `NavigationMvi` (NavHost), `ScreenState` sealed routes, `DetailScreen` receiving `name`/`age` args, MVI layer (`MainViewModel`, `MainUiState/Event/Effect`) carried over from Week 1.
 
-**Notes:** built a 2-screen graph (MainScreen → DetailScreen), passed String + Int arguments through the route with `navArgument`, used default & nullable argument config, integrated navigation with the existing MVI screen. Added back navigation via hoisted `onBack` lambda (DetailScreen stays decoupled from NavController — preview/test friendly). Added numeric age input: `KeyboardType.Number` keyboard + digit-only validation enforced in the ViewModel reducer (UX hint vs. actual enforcement).
+**Notes:** built a 2-screen graph (MainScreen → DetailScreen), passed String + Int arguments through the route with `navArgument`, used default & nullable argument config, integrated navigation with the existing MVI screen. Added back navigation via hoisted `onBack` lambda (DetailScreen stays decoupled from NavController — preview/test friendly). Added numeric age input: `KeyboardType.Number` keyboard + digit-only validation enforced in the ViewModel reducer (UX hint vs. actual enforcement). Built a nested auth graph (`navigation/AuthGraph.kt`): Login → Register → MainScreen, with the auth flow scoped under route `"auth"` and cleared via `popUpTo(... ) { inclusive = true }` so Back from Main exits instead of re-entering auth. Learned: a graph has its own route distinct from its screens; `NavGraphBuilder` extension functions keep `NavHost` clean and make each feature flow a self-contained, scoped unit.
+
+**Notes written:** Navigation - Overview, NavHost and NavController, Arguments Passing, Back Navigation, Numeric TextField Input, Nested Graphs
 
 ---
 
@@ -298,8 +300,8 @@
 # Current Focus
 
 - Week 4 — Navigation + Compose UI (in progress)
-    - ✅ Done: NavHost/NavController, route setup, typed argument passing, back navigation (NavigationApp)
-    - Next: nested graphs, bottom navigation
+    - ✅ Done: NavHost/NavController, route setup, typed argument passing, back navigation, nested graphs (NavigationApp)
+    - Next: bottom navigation (builds on the nested-graph work)
     - Then: UI patterns (LazyColumn, Scaffold, Coil) + extend Posts App
 
 ---
