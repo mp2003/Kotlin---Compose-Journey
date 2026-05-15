@@ -146,17 +146,17 @@
 
 ---
 
-# WEEK 4 — Navigation + Compose UI
+# WEEK 4 — Navigation + Compose UI  🔶 IN PROGRESS
 
 ## Theory
-- [ ] NavHost & NavController
-- [ ] Arguments passing
+- [x] NavHost & NavController
+- [x] Arguments passing
 - [ ] Nested graphs
 - [ ] Bottom navigation
 
 ## Coding
-- [ ] Setup navigation routes
-- [ ] Pass arguments
+- [x] Setup navigation routes (sealed `ScreenState` route definitions)
+- [x] Pass arguments (typed `navArgument` + `NavType.StringType` / `NavType.IntType`, default values)
 - [ ] Back navigation
 
 ### UI Patterns
@@ -168,6 +168,10 @@
 
 ### Build
 - [ ] Extend Posts App with navigation
+
+**Project:** `NavigationApp` — `NavigationMvi` (NavHost), `ScreenState` sealed routes, `DetailScreen` receiving `name`/`age` args, MVI layer (`MainViewModel`, `MainUiState/Event/Effect`) carried over from Week 1.
+
+**Notes:** built a 2-screen graph (MainScreen → DetailScreen), passed String + Int arguments through the route with `navArgument`, used default & nullable argument config, integrated navigation with the existing MVI screen.
 
 ---
 
@@ -282,7 +286,7 @@
 | Week 1 | ✅ Complete    |
 | Week 2 | ✅ Complete |
 | Week 3 | ✅ Complete |
-| Week 4 | ⬜ Not started |
+| Week 4 | 🔶 In progress |
 | Week 5 | ⬜ Not started |
 | Week 6 | ⬜ Not started |
 | Week 7 | ⬜ Not started |
@@ -292,9 +296,10 @@
 
 # Current Focus
 
-- Week 4 — Navigation + Compose UI
-    - Start with NavHost & NavController theory
-    - Build: extend Posts App with navigation
+- Week 4 — Navigation + Compose UI (in progress)
+    - ✅ Done: NavHost/NavController, route setup, typed argument passing (NavigationApp)
+    - Next: back navigation, nested graphs, bottom navigation
+    - Then: UI patterns (LazyColumn, Scaffold, Coil) + extend Posts App
 
 ---
 
