@@ -151,13 +151,14 @@
 ## Theory
 - [x] NavHost & NavController
 - [x] Arguments passing
-- [ ] Nested graphs
+- [x] Nested graphs
 - [ ] Bottom navigation
 
 ## Coding
 - [x] Setup navigation routes (sealed `ScreenState` route definitions)
 - [x] Pass arguments (typed `navArgument` + `NavType.StringType` / `NavType.IntType`, default values)
 - [x] Back navigation (`popBackStack()` hoisted as `onBack: () -> Unit` — screen decoupled from NavController)
+- [x] Nested graph — `navigation(route = "auth", startDestination = "login")` as a `NavGraphBuilder.authGraph()` extension; cleared whole flow with `popUpTo(AuthGraph) { inclusive = true }`
 
 ### UI Patterns
 - [ ] LazyColumn / LazyRow
