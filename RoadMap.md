@@ -161,20 +161,33 @@
 - [x] Nested graph — `navigation(route = "auth", startDestination = "login")` as a `NavGraphBuilder.authGraph()` extension; cleared whole flow with `popUpTo(AuthGraph) { inclusive = true }`
 
 ### UI Patterns
-- [ ] LazyColumn / LazyRow
-- [ ] Scaffold
-- [ ] BottomSheet / Dialog
-- [ ] Animations
+- [x] LazyColumn / LazyRow (`LazyColumn` + `items(key = { it.id })` in Todo list; stable keys for correct add/delete)
+- [x] Scaffold (Profile screen `Scaffold(snackbarHost = ...)` with `innerPadding`)
+- [x] Dialog (`DatePickerDialog` on MainScreen DOB picker)
+- [ ] BottomSheet
+- [ ] Animations (touched `basicMarquee` on Profile title)
 - [ ] Coil image loading
 
 ### Build
 - [ ] Extend Posts App with navigation
+- [x] OTP Login flow (username → OTP → verify) with full MVI + fake authenticator + resend countdown timer
+- [x] Profile screen (View/Edit modes, draft pattern for true Cancel, snackbar effect, nav-arg userName)
+- [x] Todo list screen (add / toggle / delete with immutable list ops, derived counter, empty state)
 
 **Project:** `NavigationApp` — `NavigationMvi` (NavHost), `ScreenState` sealed routes, `DetailScreen` receiving `name`/`age` args, MVI layer (`MainViewModel`, `MainUiState/Event/Effect`) carried over from Week 1.
 
 **Notes:** built a 2-screen graph (MainScreen → DetailScreen), passed String + Int arguments through the route with `navArgument`, used default & nullable argument config, integrated navigation with the existing MVI screen. Added back navigation via hoisted `onBack` lambda (DetailScreen stays decoupled from NavController — preview/test friendly). Added numeric age input: `KeyboardType.Number` keyboard + digit-only validation enforced in the ViewModel reducer (UX hint vs. actual enforcement). Built a nested auth graph (`navigation/AuthGraph.kt`): Login → Register → MainScreen, with the auth flow scoped under route `"auth"` and cleared via `popUpTo(... ) { inclusive = true }` so Back from Main exits instead of re-entering auth. Learned: a graph has its own route distinct from its screens; `NavGraphBuilder` extension functions keep `NavHost` clean and make each feature flow a self-contained, scoped unit.
 
-**Notes written:** Navigation - Overview, NavHost and NavController, Arguments Passing, Back Navigation, Numeric TextField Input, Nested Graphs
+**Session additions (MVI deep-dive + new screens):**
+- **OTP Login flow** — replaced placeholder Login with full MVI: `LoginUiState` (username/otp/step enum/loading/error/resendSecondsLeft), `LoginUiEvent`, `LoginUiEffect` (NavigateToMain, ShowMessage). `OtpAuthenticator` interface + `FakeOtpAuthenticator` (hardcoded OTP "1234") behind an interface so a real backend swaps in one file. Built a **resend countdown** with `viewModelScope` + `delay` + a cancellable `Job` (cancel old timer before starting new — fixes spam-tap). On login success, passes `username` out via `onLoginSuccess(state.username)` callback.
+- **Pass data through nav routes** — login username threaded Login → `main_screen/{userName}` → DetailScreen. Learned the route-template contract: `{placeholder}` literal in route + matching `navArgument(type)` + matching `getXxx(key)` read; same name/order/count in all places or it crashes (`destination cannot be found`). `NavType.LongType` (not Int) for epoch millis.
+- **DatePicker** — replaced age text input with Material3 `DatePickerDialog`/`rememberDatePickerState` (DOB as epoch millis Long); `calculateAge`/`formatDob` extracted as **pure top-level functions** (domain layer, not ViewModel — logic that's stateless belongs in utils, not VM).
+- **Profile screen (solo build)** — View/Edit mode enum; **draft pattern** (`name` committed vs `draft` in-flight) so Cancel truly discards; Save promotes draft→name + fires snackbar; `Scaffold` + `SnackbarHostState` + `LaunchedEffect` effect collector; Save button `enabled = draft != name` (derived display decision).
+- **Todo list (solo build)** — list state (`List<TodoItem>`), **id-carrying events** (`ToggleTodo(id)`, `DeleteTodo(id)`), immutable list updates (`+`, `.map`, `.filter` — never mutate), `LazyColumn` with stable keys, reusable `TodoRow` taking callbacks, derived "N of M done" counter, empty state.
+
+**Concepts solidified:** State (`.update`, sticky) vs Effect (`Channel.send`, one-shot, consumed once); why `collectAsState` subscribes (push not poll) vs `remember { mutableStateOf }` (local snapshot, no updates) — debugged a real "Edit not updating" bug from this; `viewModel()` helper vs `ViewModel()` constructor (latter re-runs on recompose → state resets → debugged a "buggy input" bug from this); where logic lives (stateful → ViewModel, pure → domain utils, render decision → composable); a screen with no logic (DetailScreen) needs no ViewModel.
+
+**Notes written:** Navigation - Overview, NavHost and NavController, Arguments Passing, Back Navigation, Numeric TextField Input, Nested Graphs, OTP Login MVI, Resend Countdown Timer, Route Argument Contract, DatePicker + DOB, State vs Effect, collectAsState vs mutableStateOf, viewModel() vs constructor, Draft Pattern, List State + id Events, LazyColumn, Scaffold + Snackbar
 
 ---
 
@@ -300,9 +313,10 @@
 # Current Focus
 
 - Week 4 — Navigation + Compose UI (in progress)
-    - ✅ Done: NavHost/NavController, route setup, typed argument passing, back navigation, nested graphs (NavigationApp)
+    - ✅ Done: NavHost/NavController, route setup, typed argument passing, back navigation, nested graphs, OTP login flow, DatePicker dialog, Profile screen (draft pattern), Todo list (LazyColumn), Scaffold + Snackbar (NavigationApp)
     - Next: bottom navigation (builds on the nested-graph work)
-    - Then: UI patterns (LazyColumn, Scaffold, Coil) + extend Posts App
+    - Then: remaining UI patterns (BottomSheet, animations, Coil image loading) + extend Posts App
+    - Stretch: async-shaped screen (isLoading/error/success as the primary shape) — only MVI muscle not yet drilled standalone
 
 ---
 
