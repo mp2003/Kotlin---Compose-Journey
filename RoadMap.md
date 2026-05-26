@@ -191,18 +191,20 @@
 
 ---
 
-# WEEK 5 — Room + DataStore
+# WEEK 5 — Room + DataStore  🔶 IN PROGRESS
 
 ## Theory
-- [ ] Room basics
+- [x] Room basics
 - [ ] DataStore usage
-- [ ] Flow from DB
-- [ ] Offline-first pattern
+- [x] Flow from DB
+- [x] Offline-first pattern
 
 ## Coding
-- [ ] Create Entity
-- [ ] DAO queries
-- [ ] Database setup
+- [x] Create Entity (`TicketEntity` — @Entity, @PrimaryKey, date as Long, photo as Uri String)
+- [x] DAO queries (`TicketDao` — observeAll Flow, observeById Flow?, insert suspend Long, deleteById suspend)
+- [x] Database setup (`AppDatabase` — @Database, abstract class, singleton companion object)
+- [x] Repository (`TicketRepository` — thin wrapper, constructor injection)
+- [ ] ServiceLocator — manual DI object *(next up)*
 
 ### DataStore
 - [ ] Store token
@@ -210,6 +212,10 @@
 
 ### Build
 - [ ] Offline-enabled Posts App
+- [x] Memory Ticket App — data layer (via MemoryTicket project)
+
+**Notes written:** Room - Overview, Entity, DAO, Database, Repository, Flow from Database, ServiceLocator (manual DI)
+**Project:** `MemoryTicket` — `/Users/mahi/AndroidStudioProjects/MemoryTicket`
 
 ---
 
@@ -303,7 +309,7 @@
 | Week 2 | ✅ Complete |
 | Week 3 | ✅ Complete |
 | Week 4 | 🔶 In progress |
-| Week 5 | ⬜ Not started |
+| Week 5 | 🔶 In progress |
 | Week 6 | ⬜ Not started |
 | Week 7 | ⬜ Not started |
 | Week 8 | ⬜ Not started |
