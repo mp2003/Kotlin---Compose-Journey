@@ -320,9 +320,13 @@
 
 - Week 4 — Navigation + Compose UI (in progress)
     - ✅ Done: NavHost/NavController, route setup, typed argument passing, back navigation, nested graphs, OTP login flow, DatePicker dialog, Profile screen (draft pattern), Todo list (LazyColumn), Scaffold + Snackbar (NavigationApp)
-    - Next: bottom navigation (builds on the nested-graph work)
-    - Then: remaining UI patterns (BottomSheet, animations, Coil image loading) + extend Posts App
-    - Stretch: async-shaped screen (isLoading/error/success as the primary shape) — only MVI muscle not yet drilled standalone
+    - Remaining: bottom nav, BottomSheet, animations, Coil image loading
+    - Being practiced via: MemoryTicket App (Sessions 2–3)
+
+- Week 5 — Room + DataStore (in progress via MemoryTicket App)
+    - ✅ Done: Entity, DAO, Database, Repository, Flow-from-DB
+    - Next: ServiceLocator (manual DI), then wire to UI in Session 2
+    - Project: `/Users/mahi/AndroidStudioProjects/MemoryTicket`
 
 ---
 

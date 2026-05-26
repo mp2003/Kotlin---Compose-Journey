@@ -11,10 +11,14 @@
             "id": "45fef640c8366dae",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Room/06 - Room - ServiceLocator (manual DI).md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "06 - Room - ServiceLocator (manual DI)"
             }
           }
         ]
@@ -214,10 +218,10 @@
   },
   "active": "45fef640c8366dae",
   "lastOpenFiles": [
+    "RoadMap.md",
     "DI/06 - Hilt - Provides vs Binds.md",
     "DI/01 - Injection - Constructor Injection.md",
     "DI/00 - DI - Overview.md",
-    "RoadMap.md",
     "~ Learning Journal/04 - Mock Quiz Bank.md",
     "z_Learning Journal/04 - Mock Quiz Bank.md",
     "z_Learning Journal/03 - Weak Areas & Revision Topics.md",
