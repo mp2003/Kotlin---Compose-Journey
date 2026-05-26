@@ -204,7 +204,7 @@
 - [x] DAO queries (`TicketDao` — observeAll Flow, observeById Flow?, insert suspend Long, deleteById suspend)
 - [x] Database setup (`AppDatabase` — @Database, abstract class, singleton companion object)
 - [x] Repository (`TicketRepository` — thin wrapper, constructor injection)
-- [ ] ServiceLocator — manual DI object *(next up)*
+- [x] ServiceLocator — manual DI object
 
 ### DataStore
 - [ ] Store token
