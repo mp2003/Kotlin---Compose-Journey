@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/05 - Phase 5 - Interceptors.md",
-                "mode": "source",
+                "file": "Networking/02 - Phase 2 - Repository.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05 - Phase 5 - Interceptors"
+              "title": "02 - Phase 2 - Repository"
             }
           }
         ],
@@ -247,6 +247,8 @@
   },
   "active": "c01145e17ee29a82",
   "lastOpenFiles": [
+    "04 - Room - Repository.md",
+    "Networking/05 - Phase 5 - Interceptors.md",
     "Navigation/05 - Nested Graphs.md",
     "Navigation/04 - Numeric TextField Input.md",
     "Navigation/03 - Back Navigation.md",
@@ -272,8 +274,6 @@
     "DI/08 - Qualifiers.md",
     "DI/06 - Hilt - Provides vs Binds.md",
     "note Format.md",
-    "AGENTS.md",
-    "Networking/05 - Phase 5 - Interceptors.md",
     "Keywords",
     "Networking",
     "Untitled.canvas",
