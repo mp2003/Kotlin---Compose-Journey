@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Room/06 - Room - ServiceLocator (manual DI).md",
+                "file": "Room/05 - Room - Flow from Database.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06 - Room - ServiceLocator (manual DI)"
+              "title": "05 - Room - Flow from Database"
             }
           }
         ]
@@ -218,6 +218,8 @@
   },
   "active": "45fef640c8366dae",
   "lastOpenFiles": [
+    "MVI Architecture/06 - ViewModel - The Brain.md",
+    "Room/06 - Room - ServiceLocator (manual DI).md",
     "RoadMap.md",
     "DI/06 - Hilt - Provides vs Binds.md",
     "DI/01 - Injection - Constructor Injection.md",
@@ -241,12 +243,10 @@
     "Learning Journal/00 - Learning Journal - Overview.md",
     "Learning Journal",
     "Room/04 - Room - Repository.md",
-    "Room/06 - Room - ServiceLocator (manual DI).md",
     "Room/05 - Room - Flow from Database.md",
     "Networking/02 - Phase 2 - Repository.md",
     "Networking/01 - Phase 1 - Basic GET Call.md",
     "Networking/05 - Phase 5 - Interceptors.md",
-    "Networking/03 - Phase 3 - MVI Integration.md",
     "Navigation",
     "Keywords",
     "Networking",
