@@ -324,8 +324,9 @@
     - Being practiced via: MemoryTicket App (Sessions 2–3)
 
 - Week 5 — Room + DataStore (in progress via MemoryTicket App)
-    - ✅ Done: Entity, DAO, Database, Repository, Flow-from-DB
-    - Next: ServiceLocator (manual DI), then wire to UI in Session 2
+    - ✅ Done: Entity, DAO, Database, Repository, ServiceLocator, Flow-from-DB
+    - ✅ Session 2 done: ListUiState, ListViewModel (.stateIn), ListViewModelFactory, TicketListScreen, NavHost, MainActivity — app runs, shows empty state
+    - Next: Session 3 — Create screen (add a ticket, see it persist)
     - Project: `/Users/mahi/AndroidStudioProjects/MemoryTicket`
 
 ---

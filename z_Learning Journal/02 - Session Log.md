@@ -40,3 +40,33 @@
 - [[Room/04 - Room - Repository]]
 - [[Room/05 - Room - Flow from Database]]
 - [[Room/06 - Room - ServiceLocator (manual DI)]]
+
+---
+
+###### Session 2 — 2026-05-27 — List Screen + MVI + App Launch
+
+**What was built:**
+- `ListUiState` / `ListEvent` — sealed interfaces
+- `ListViewModel` — Room Flow -> StateFlow via `.stateIn()`
+- `ListViewModelFactory` — `ViewModelProvider.Factory` for constructor injection
+- `TicketListScreen` — Scaffold, TopAppBar, FAB, Loading/Empty/Success states, LazyColumn
+- `ScreenState` — sealed class for typed nav routes
+- `MemoryTicketNavHost` — NavHost wired to list screen
+- `MainActivity` — app entry point
+- App ran successfully — empty state visible
+
+**What clicked:**
+- `.stateIn()` pattern — understood and applied correctly
+- `LazyColumn` with `items(key = { it.id })` — familiar from Week 4
+- `Scaffold` + `TopAppBar` + `FAB` — applied correctly
+- `when(state)` with `is` on data class, plain on objects — correct
+
+**What didn't click / needed help:**
+- `ViewModelProvider.Factory` — new concept, needed full explanation
+- Missing `package` declaration on multiple files — recurring mistake to watch
+- `NavController` type annotation — should let Kotlin infer it
+- `onCreate` override — picked wrong two-parameter version
+- Extra `{ }` wrapping inside Scaffold content block
+
+**Recurring pattern to fix:**
+- Always write `package com.milind.memoryticket.xxx` as the FIRST line of every new file
