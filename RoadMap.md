@@ -325,8 +325,9 @@
 
 - Week 5 — Room + DataStore (in progress via MemoryTicket App)
     - ✅ Done: Entity, DAO, Database, Repository, ServiceLocator, Flow-from-DB
-    - ✅ Session 2 done: ListUiState, ListViewModel (.stateIn), ListViewModelFactory, TicketListScreen, NavHost, MainActivity — app runs, shows empty state
-    - Next: Session 3 — Create screen (add a ticket, see it persist)
+    - ✅ Session 2 done: Home screen (ListUiState, ListViewModel, NavHost, MainActivity) — app runs
+    - ✅ App redesigned: 3 screens — Home (Canvas carousel), Create, Edit
+    - Next: Session 3 — Create screen (form + save to Room)
     - Project: `/Users/mahi/AndroidStudioProjects/MemoryTicket`
 
 ---
