@@ -233,6 +233,8 @@
   },
   "active": "0f8e384da2148dd3",
   "lastOpenFiles": [
+    "MVI Architecture/02 - Intent - User Actions.md",
+    "MVI Architecture/05 - Effect - One-time Events.md",
     "MVI Architecture/00 - MVI - Overview.md",
     "Navigation/01 - NavHost and NavController.md",
     "Navigation/00 - Navigation - Overview.md",
@@ -259,9 +261,7 @@
     "Learning Journal/03 - Weak Areas & Revision Topics.md",
     "Learning Journal/02 - Session Log.md",
     "Learning Journal/01 - Learning Curve.md",
-    "Learning Journal/00 - Learning Journal - Overview.md",
     "Learning Journal",
-    "Room/04 - Room - Repository.md",
     "Navigation",
     "Keywords",
     "Networking",
