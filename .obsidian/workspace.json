@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/07 - Task Manager Screen - Exercise.md",
+                "file": "AGENTS.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07 - Task Manager Screen - Exercise"
+              "title": "AGENTS"
             }
           }
         ],
@@ -94,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 423.5
   },
   "right": {
     "id": "d75270cf3320d5ac",
@@ -233,6 +233,8 @@
   },
   "active": "0f8e384da2148dd3",
   "lastOpenFiles": [
+    "CLAUDE.md",
+    "MVI Architecture/07 - Task Manager Screen - Exercise.md",
     "MVI Architecture/06 - ViewModel - The Brain.md",
     "MVI Architecture/05 - Effect - One-time Events.md",
     "MVI Architecture/04 - Reducer - Pure State Update.md",
@@ -259,8 +261,6 @@
     "~ Learning Journal/00 - Learning Journal - Overview.md",
     "~ Learning Journal",
     "Learning Journal/04 - Mock Quiz Bank.md",
-    "Learning Journal/03 - Weak Areas & Revision Topics.md",
-    "Learning Journal/02 - Session Log.md",
     "Learning Journal",
     "Navigation",
     "Keywords",
