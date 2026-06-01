@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVI Architecture/00 - MVI - Overview.md",
-                "mode": "preview",
+                "file": "Store Profile Feature/01 - Domain Model.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - MVI - Overview"
+              "title": "01 - Domain Model"
             }
           }
         ]
@@ -218,6 +218,14 @@
   },
   "active": "45fef640c8366dae",
   "lastOpenFiles": [
+    "Store Profile Feature/00 - Store Profile - Overview.md",
+    "MVI Architecture/00 - MVI - Overview.md",
+    "Store Profile Feature/20 - Build Gradle.md",
+    "Store Profile Feature/19 - NavGraph.md",
+    "Store Profile Feature/18 - Destinations.md",
+    "Store Profile Feature/17 - Routes.md",
+    "Store Profile Feature/16 - Pure Screen.md",
+    "Store Profile Feature/15 - RootScreen.md",
     "Store Profile Feature/14 - ViewModel.md",
     "Store Profile Feature/13 - InitialState.md",
     "Store Profile Feature/12 - Navigation.md",
@@ -233,21 +241,13 @@
     "Store Profile Feature/03 - UseCase Contract.md",
     "Store Profile Feature/02 - Repository Contract.md",
     "Store Profile Feature/01 - Domain Model.md",
-    "Store Profile Feature/00 - Store Profile - Overview.md",
     "Insights/store-profile/presentation/navigation/nav-routes.md",
     "Store Profile Feature",
     "Insights/store-profile/presentation/navigation/nav-navgraph.md",
     "Insights/store-profile/presentation/navigation/nav-destinations.md",
     "Insights/store-profile/data/repository-impl.md",
-    "Insights/store-profile/di/di-module.md",
-    "Insights/store-profile/build-gradle.md",
-    "Insights/store-profile/README.md",
     "Insights/store-profile/presentation/navigation/nav-navgraph.md.tmp.48426.52dd07fce6c6",
-    "Insights/store-profile/presentation/screen/screen-pure.md",
-    "Insights/store-profile/presentation/screen/screen-root.md",
     "Insights/store-profile/presentation/screen/screen-root.md.tmp.48426.03b422da7804",
-    "Insights/store-profile/presentation/viewmodel/viewmodel.md",
-    "Insights/store-profile/presentation/state/state-initialstate.md",
     "Insights/store-profile/domain/usecase-contract.md.tmp.48426.b0a027850e15",
     "Insights/store-profile/presentation/viewmodel",
     "Insights/store-profile/presentation/state",
