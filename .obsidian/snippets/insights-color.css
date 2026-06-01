@@ -1,0 +1,40 @@
+/* insights-color.css
+   Enable in: Settings -> Appearance -> CSS snippets -> toggle "insights-color".
+   Colors h6 headings + highlights + bold so insight notes scan fast.
+   Works in reading + live-preview view. Pure-markdown notes stay clean. */
+
+/* h6 (######) headings — the section titles in every note */
+.markdown-rendered h6,
+.markdown-source-view.mod-cm6 .HyperMD-header-6 {
+  color: #c678dd;              /* purple */
+  font-weight: 700;
+  font-size: 1.05em;
+  letter-spacing: 0.2px;
+}
+
+/* ==highlight== — used for key terms / keywords */
+.markdown-rendered mark,
+.cm-highlight {
+  background: rgba(229, 192, 123, 0.18);  /* soft amber bg */
+  color: #e5c07b;                          /* amber text */
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+/* **bold** — used for the thing-being-named */
+.markdown-rendered strong,
+.cm-strong {
+  color: #61afef;             /* blue */
+}
+
+/* inline `code` — keywords/APIs */
+.markdown-rendered :not(pre) > code {
+  color: #98c379;             /* green */
+  background: rgba(152, 195, 121, 0.10);
+}
+
+/* blockquotes — used for "remember this" lines */
+.markdown-rendered blockquote {
+  border-left: 3px solid #e06c75;   /* red accent */
+  color: #e06c75;
+}
