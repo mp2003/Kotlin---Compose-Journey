@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Insights/store-profile/README.md",
+                "file": "Insights/store-profile/presentation/navigation/nav-routes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "nav-routes"
             }
           }
         ],
@@ -233,6 +233,14 @@
   },
   "active": "0f8e384da2148dd3",
   "lastOpenFiles": [
+    "Insights/store-profile/presentation/navigation/nav-navgraph.md",
+    "Insights/store-profile/presentation/navigation/nav-destinations.md",
+    "Insights/store-profile/data/repository-impl.md",
+    "Insights/store-profile/di/di-module.md",
+    "Insights/store-profile/build-gradle.md",
+    "Insights/store-profile/README.md",
+    "Insights/store-profile/presentation/navigation/nav-navgraph.md.tmp.48426.52dd07fce6c6",
+    "Insights/store-profile/presentation/navigation/nav-routes.md",
     "Insights/store-profile/presentation/screen/screen-pure.md",
     "Insights/store-profile/presentation/screen/screen-root.md",
     "Insights/store-profile/presentation/screen/screen-root.md.tmp.48426.03b422da7804",
@@ -243,12 +251,9 @@
     "Insights/store-profile/presentation/state/state-action.md",
     "Insights/store-profile/presentation/state/state-uistate.md",
     "Insights/README.md",
-    "Insights/store-profile/README.md",
     "Insights/store-profile/domain/model-store-profile.md",
     "Insights/store-profile/domain/error-ids.md",
     "Insights/store-profile/mapper/transformer.md",
-    "Insights/store-profile/di/di-module.md",
-    "Insights/store-profile/data/repository-impl.md",
     "Insights/store-profile/domain/usecase-impl.md",
     "Insights/store-profile/domain/usecase-contract.md",
     "Insights/store-profile/domain/usecase-contract.md.tmp.48426.b0a027850e15",
@@ -260,15 +265,10 @@
     "Insights/store-profile/presentation",
     "Insights/store-profile/mapper",
     "Insights/store-profile/domain",
-    "Insights/store-profile/di",
     "AGENTS.md",
     "CLAUDE.md",
     "MVI Architecture/07 - Task Manager Screen - Exercise.md",
     "MVI Architecture/06 - ViewModel - The Brain.md",
-    "MVI Architecture/05 - Effect - One-time Events.md",
-    "MVI Architecture/04 - Reducer - Pure State Update.md",
-    "MVI Architecture/02 - Intent - User Actions.md",
-    "MVI Architecture/00 - MVI - Overview.md",
     "Untitled.canvas"
   ]
 }
