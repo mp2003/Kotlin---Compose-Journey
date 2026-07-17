@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Store Profile Feature/01 - Domain Model.md",
+                "file": "MVI Architecture/00 - MVI - Overview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - Domain Model"
+              "title": "00 - MVI - Overview"
             }
           }
         ]
@@ -218,6 +218,7 @@
   },
   "active": "45fef640c8366dae",
   "lastOpenFiles": [
+    "Store Profile Feature/01 - Domain Model.md",
     "Store Profile Feature/00 - Store Profile - Overview.md",
     "MVI Architecture/00 - MVI - Overview.md",
     "Store Profile Feature/20 - Build Gradle.md",
@@ -240,7 +241,6 @@
     "Store Profile Feature/04 - UseCase Impl.md",
     "Store Profile Feature/03 - UseCase Contract.md",
     "Store Profile Feature/02 - Repository Contract.md",
-    "Store Profile Feature/01 - Domain Model.md",
     "Insights/store-profile/presentation/navigation/nav-routes.md",
     "Store Profile Feature",
     "Insights/store-profile/presentation/navigation/nav-navgraph.md",
